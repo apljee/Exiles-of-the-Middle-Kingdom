@@ -1,0 +1,12 @@
+emk_frontier_born = {
+    age = age_1_traditions
+    potential = {
+        tag = EMK
+    }
+    depth = 0
+    icon = colonies
+    requires = peasant_connections_advance
+    research_cost = 1.0
+    unlock_cabinet_action = settle_the_frontier
+    global_max_rgo_size_modifier_in_rural = 0.1
+}

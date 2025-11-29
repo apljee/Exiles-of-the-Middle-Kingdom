@@ -1,0 +1,85 @@
+namespace = emk_c_events
+
+## Colonization Events
+# Placeholder implementation. Currently, this is the best idea I have for a barebones implementation, probably not the best way to do it though.
+# Ideally, pick a location that has adjacency to the player from a preconfigured list of locations and then fire [emk_events.2] targeting that location.
+# V0.1 System - copying the event with a (relatively) low monthly_chance and hoping that it can simulate the intended effect.
+# V0.2 System - linear events that guide the player's colonization efforts through a more story-based system. Less random, but offers less replayability.
+# Ideal system - A mix between the two with the aforementioned characteristics.
+
+# emk_event.1 is a semi-story event that informs the player that scripted colonization is beginning.
+# emk_event.2 is the template for all of the other scripted colonization events.
+
+emk_c_events.1 = {
+    type = country_event
+    title = emk_c_events.1.title
+    desc = emk_c_events.1.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1343.6.1
+        to = 1343.7.1
+        monthly_chance = 100
+    }
+    trigger = {
+        owns = location:awaswas
+        c:EMK = {
+            NOT = {
+                owns = location:chochenyo
+            }
+        }
+    }
+    illustration_tags = {
+        10 = exterior
+        10 = regular
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        ruler = { save_scope_as = target_character }
+    }
+    option = {
+        name = emk_c_events.a
+        location:chochenyo = {
+            change_location_owner = c:EMK
+            change_raw_material = goods:rice
+        }
+        hidden_effect = {
+            location:yashikumne = {
+                discover_location = c:EMK
+            }
+            location:suisin = {
+                discover_location = c:EMK
+            }
+            location:noptinte = {
+                discover_location = c:EMK
+            }
+            location:chochenyo = {
+                change_max_raw_material_workers = 1
+                add_pop = {
+                    type = pop_type:nobles
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 0.081
+                }
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 1.034
+                }
+                every_pop = {
+                    limit = {
+                        culture = culture:ohlone_culture
+                    }
+                    split_pop = {
+                        fraction = 0.90
+                        location = location:mutsun
+                    }
+                }
+            }
+        }
+    }
+}

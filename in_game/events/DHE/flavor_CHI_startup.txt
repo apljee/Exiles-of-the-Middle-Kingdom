@@ -1,0 +1,701 @@
+﻿namespace = flavor_chi_startup
+
+flavor_chi_startup.1 = { #The Great Navigator
+    type = country_event
+    title = flavor_chi_startup.1.title
+    desc = flavor_chi_startup.1.desc
+    fire_only_once = yes
+
+    dynamic_historical_event = {
+        tag = CHI
+        from = 1337.4.1
+        to = 1337.6.1
+        monthly_chance = 100
+    }
+
+    trigger = {
+        owns = location:dadu
+    }
+
+    immediate = {
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+
+    option = { #Fusang awaits!
+        name = flavor_chi_startup.1.a
+        set_global_variable = emk_startup_active
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.2
+                days = { 1 7 }
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+        custom_tooltip = {
+            text = emk_thanks
+        }
+    }
+}
+
+flavor_chi_startup.2 = { #A Stormy Night in Quanzhou
+    type = country_event
+    title = flavor_chi_startup.2.title
+    desc = flavor_chi_startup.2.desc
+    fire_only_once = yes
+
+    dynamic_historical_event = {
+        tag = CHI
+        from = 1336.5.1
+        to = 1336.6.1
+        monthly_chance = 0
+    }
+
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:burghers_estate
+            background = estate_type:nobles_estate
+        }
+    }
+
+    option = { #The Shāng will lead us to Fusang!
+        name = flavor_chi_startup.2.a
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.3
+                days = { 1 7 }
+            }
+        }
+        set_global_variable = emk_startup_shang
+        ai_chance = {
+            base = 25
+        }
+        custom_tooltip = {
+            text = emk_startup_warning_04
+        }
+        custom_tooltip = {
+            text = emk_startup_warning_01
+        }
+    }
+    option = { #The Sēnglǚ will lead us to Fusang!
+        name = flavor_chi_startup.2.b
+        set_global_variable = emk_startup_senglu
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.5
+                days = { 1 7 }
+            }
+        }
+        ai_chance = {
+            base = 50
+        }
+        custom_tooltip = {
+            text = emk_startup_warning_04
+        }
+        custom_tooltip = {
+            text = emk_startup_warning_02
+        }
+    }
+    option = { #The Shì will lead us to Fusang!
+        name = flavor_chi_startup.2.c
+        set_global_variable = emk_startup_shi
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.4
+                days = { 1 7 }
+            }
+        }
+        ai_chance = {
+            base = 25
+        }
+        custom_tooltip = {
+            text = emk_startup_warning_04
+        }
+        custom_tooltip = {
+            text = emk_startup_warning_03
+        }
+    }
+}
+
+flavor_chi_startup.3 = { #Exiles of the Middle Kingdom: Korea
+    type = country_event
+    title = flavor_chi_startup.3.title
+    desc = flavor_chi_startup.3.desc
+    fire_only_once = yes
+
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+    illustration_tags = {
+        10 = interior
+    }
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:burghers_estate
+            background = estate_type:burghers_estate
+        }
+    }
+    option = { #Allow the Koreans
+        name = flavor_chi_startup.3.a
+        set_global_variable = emk_startup_korea
+        ai_chance = {
+            base = 0
+        }
+        custom_tooltip = {
+            text = emk_startup_warning_05
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.6
+                days = { 1 7 }
+            }
+        }
+    }
+    option = { #Deny the Koreans
+        name = flavor_chi_startup.3.b
+        ai_chance = {
+            base = 100
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.6
+                days = { 30 60 }
+            }
+        }
+    }
+}
+
+flavor_chi_startup.4 = { #Exiles of the Middle Kingdom: Jurchen
+    type = country_event
+    title = flavor_chi_startup.4.title
+    desc = flavor_chi_startup.4.desc
+    fire_only_once = yes
+
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+    illustration_tags = {
+        10 = exterior
+    }
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:nobles_estate
+            background = estate_type:nobles_estate
+        }
+    }
+    option = { #Allow the Jurchen
+        name = flavor_chi_startup.4.a
+        set_global_variable = emk_startup_jurchen
+        ai_chance = {
+            base = 0
+        }
+        custom_tooltip = {
+            text = emk_startup_warning_06
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.6
+                days = { 30 60 }
+            }
+        }
+    }
+    option = { #Deny the Jurchen
+        name = flavor_chi_startup.4.b
+        ai_chance = {
+            base = 100
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.6
+                days = { 30 60 }
+            }
+        }
+    }
+}
+
+flavor_chi_startup.5 = { #Exiles of the Middle Kingdom: Tibet
+    type = country_event
+    title = flavor_chi_startup.5.title
+    desc = flavor_chi_startup.5.desc
+    fire_only_once = yes
+
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+    illustration_tags = {
+        10 = exterior
+    }
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+    }
+    option = { #Allow the Tibetians
+        name = flavor_chi_startup.5.a
+        set_global_variable = emk_startup_tibet
+        ai_chance = {
+            base = 0
+        }
+        custom_tooltip = {
+            text = emk_startup_warning_07
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.6
+                days = { 30 60 }
+            }
+        }
+    }
+    option = { #Deny the Tibetians
+        name = flavor_chi_startup.5.b
+        ai_chance = {
+            base = 100
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.6
+                days = { 30 60 }
+            }
+        }
+    }
+}
+
+flavor_chi_startup.6 = { #The Grand Voyage Begins
+    type = country_event
+    title = flavor_chi_startup.6.title
+    desc = flavor_chi_startup.6.desc
+    fire_only_once = yes
+
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+    illustration_tags = {
+        10 = exterior
+    }
+
+    immediate = {
+        event_illustration_estate_effect = { 
+            background = estate_type:peasants_estate
+            foreground = estate_type:peasants_estate
+        }
+    }
+    option = { #Fusang awaits!
+        name = flavor_chi_startup.6.a
+        hidden_effect = {
+            c:CHI = {
+                trigger_event_non_silently = {
+                    id = flavor_chi_startup.7
+                    days = { 30 40 }
+                }
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+flavor_chi_startup.7 = { #The Grand Voyage I
+    type = country_event
+    title = flavor_chi_startup.7.title
+    desc = flavor_chi_startup.7.desc
+    fire_only_once = yes
+
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+    illustration_tags = {
+        10 = exterior
+    }
+
+    immediate = {
+        event_illustration_estate_effect = {
+            background = estate_type:nobles_estate
+            foreground = estate_type:nobles_estate
+        }
+    }
+    option = { #We have no room!
+        name = flavor_chi_startup.7.a
+        ai_chance = {
+            base = 100
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.11
+                days = { 30 60 }
+            }
+        }
+
+    }
+    option = { #Sakai Guildsmen
+        trigger = {
+            has_global_variable = emk_startup_shang
+        }
+        name = flavor_chi_startup.7.b
+        ai_chance = {
+            base = 0
+        }
+        custom_tooltip = {
+            text = emk_startup_warning_08
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.8
+            }
+        }
+    }
+    option = { #Samurai
+        name = flavor_chi_startup.7.c
+        custom_tooltip = {
+            text = emk_startup_warning_09
+        }
+        trigger = {
+            has_global_variable = emk_startup_shi
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.9
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+    option = { #Shinshoku
+        name = flavor_chi_startup.7.d
+        custom_tooltip = {
+            text = emk_startup_warning_10
+        }
+        trigger = {
+            has_global_variable = `emk_startup_senglu`
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.10
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+flavor_chi_startup.8 = { #Sakai Guildsmen
+    type = country_event
+    title = flavor_chi_startup.8.title
+    desc = flavor_chi_startup.8.desc
+    fire_only_once = yes
+    
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+    illustration_tags = {
+        10 = exterior
+    }
+
+    immediate = {
+        event_illustration_estate_effect = {
+            background = estate_type:burghers_estate
+            foreground = estate_type:burghers_estate
+        }
+    }
+    
+    option = { #Invite the Sakai Guildsmen
+        name = flavor_chi_startup.8.a
+        ai_chance = {
+            base = 100
+        }
+        set_global_variable = emk_startup_jp_burghers
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.11
+                days = { 30 60 }
+            }
+        }
+        hidden_effect = {
+            c:EMK = {
+                add_gold = 50
+            }
+        }
+        custom_tooltip = {
+            text = emk_bonus_gold
+        }
+    }
+    option = { #Deny the Sakai Guildsmen
+        name = flavor_chi_startup.8.b
+        ai_chance = {
+            base = 0
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.11
+                days = { 30 60 }
+            }
+        }
+    }
+}
+
+flavor_chi_startup.9 = { #Samurai
+    type = country_event
+    title = flavor_chi_startup.9.title
+    desc = flavor_chi_startup.9.desc
+    fire_only_once = yes
+    
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+    illustration_tags = {
+        10 = exterior
+    }
+
+    immediate = {
+        event_illustration_estate_effect = {
+            background = estate_type:nobles_estate
+            foreground = estate_type:nobles_estate
+        }
+    }
+    
+    option = { #Invite the Samurai
+        name = flavor_chi_startup.9.a
+        ai_chance = {
+            base = 100
+        }
+        set_global_variable = emk_startup_jp_nobles
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.11
+                days = { 30 60 }
+            }
+        }
+        hidden_effect = {
+            c:EMK = {
+                add_gold = 50
+            }
+        }
+        custom_tooltip = {
+            text = emk_bonus_gold
+        }
+    }
+    option = { #Deny the Samurai
+        name = flavor_chi_startup.9.b
+        ai_chance = {
+            base = 0
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.11
+                days = { 30 60 }
+            }
+        }
+    }
+}
+
+flavor_chi_startup.10 = { # Shinshoku
+    type = country_event
+    title = flavor_chi_startup.10.title
+    desc = flavor_chi_startup.10.desc
+    fire_only_once = yes
+    
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+    illustration_tags = {
+        10 = exterior
+    }
+
+    immediate = {
+        event_illustration_estate_effect = {
+            background = estate_type:burghers_estate
+            foreground = estate_type:burghers_estate
+        }
+    }
+    
+    option = { #Invite the Shinshoku
+        name = flavor_chi_startup.10.a
+        ai_chance = {
+            base = 100
+        }
+        set_global_variable = emk_startup_jp_clergy
+        c:CHI = {
+            trigger_event_silently = {
+                id = flavor_chi_startup.11
+                days = { 60 60 }
+            }
+        }
+        hidden_effect = {
+            c:EMK = {
+                add_gold = 50
+            }
+        }
+        custom_tooltip = {
+            text = emk_bonus_gold
+        }
+    }
+    option = { #Deny the Shinshoku
+        name = flavor_chi_startup.10.b
+        ai_chance = {
+            base = 0
+        }
+        c:CHI = {
+            trigger_event_silently = {
+                id = flavor_chi_startup.11
+                days = { 60 120 }
+            }
+        }
+    }
+}
+
+flavor_chi_startup.11 = { # The Grand Voyage II
+    type = country_event
+    title = flavor_chi_startup.11.title
+    desc = flavor_chi_startup.11.desc
+    fire_only_once = yes
+
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+	illustration_tags = {
+		10 = regular
+		10 = exterior
+	}
+    immediate = {
+		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
+    }
+
+    option = { #We must press on
+        name = flavor_chi_startup.11.a
+        ai_chance = {
+            base = 100
+        }
+        c:CHI = {
+            trigger_event_non_silently = {
+                id = flavor_chi_startup.12
+                days = { 30 60 }
+            }
+        }
+    }
+}
+
+flavor_chi_startup.12 = { # The Grand Voyage III
+    type = country_event
+    title = flavor_chi_startup.12.title
+    desc = flavor_chi_startup.12.desc
+    fire_only_once = yes
+
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+	illustration_tags = {
+		10 = regular
+		10 = exterior
+	}
+    immediate = {
+		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
+    }
+
+    option = { #We name this settlement Yuǎndōng, the first settlement in Fusang!
+        name = flavor_chi_startup.12.a
+        remove_global_variable = emk_startup_active
+        hidden_effect = {
+            location:awaswas = {
+                change_location_owner = c:EMK
+            }
+            location:awaswas = {
+                change_raw_material = goods:lumber
+                change_max_raw_material_workers = 1
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 7.834
+                    literacy = 15
+                }
+                add_pop = {
+                    type = pop_type:laborers
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 2.212
+                    literacy = 15
+                }
+                add_pop = {
+                    type = pop_type:burghers
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 0.987
+                    literacy = 15
+                }
+                add_pop = {
+                    type = pop_type:nobles
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 0.193
+                    literacy = 15
+                }
+                add_pop = {
+                    type = pop_type:clergy
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 0.133
+                    literacy = 15
+                }
+                add_pop = {
+                    type = pop_type:soldiers
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 0.500
+                    literacy = 15
+                }
+            }
+        }
+        hidden_effect = {
+            create_market = {
+                builder = c:EMK
+                location = location:awaswas
+                price = price:create_market
+                instant = yes
+                price_modifier = 0
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+        change_player = c:EMK
+    }
+}

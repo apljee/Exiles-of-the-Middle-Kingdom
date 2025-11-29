@@ -1,0 +1,4 @@
+market_manager = {
+    #tachi yokut
+    add_market = tachi
+}

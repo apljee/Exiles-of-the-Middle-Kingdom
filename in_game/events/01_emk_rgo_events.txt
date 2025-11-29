@@ -1,0 +1,40 @@
+namespace = emk_rgo_events
+
+### RGO Events
+# Basic events that give the player the option to change the RGO of a province after it is colonized.
+# Should be guaranteed to fire in the month proceeding the Frontier: XXX event.
+
+emk_rgo_events.1 = {
+    type = country_event
+    title = emk_rgo_events.1.title
+    desc = emk_rgo_events.1.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.1.1
+        to = 1365.1.1
+        monthly_chance = 100
+    }
+    trigger = {
+        owns = location:awaswas
+        owns = location:tepotahal
+        tag = EMK
+    }
+    option = {
+        name = emk_rgo_events.1.a
+        location:tepotahal = {
+            change_raw_material = goods:gems
+        }
+        hidden_effect = {
+            location:tepotahal = {
+                change_max_raw_material_workers = 1
+            }
+        }
+    }
+    option = {
+        name = emk_rgo_events.1.b
+        location:tepotahal = {
+            change_max_raw_material_workers = 2
+        }
+    }
+}

@@ -1,0 +1,52 @@
+EMK = { # Yuandong / Exiles of the Middle Kingdom main
+	color = rgb { 252 186 3 }
+	color2 = rgb { 252 230 167 }
+
+	culture_definition = jiaodong_culture
+	religion_definition = sanjiao
+
+	description_category = administrative
+	difficulty = 3
+}
+SHI = { # Shinsekai / Japanese settlers
+    color = rgb { 252 3 53 }
+    color2 = rgb { 51 51 51 }
+
+    culture_definition = saigoku_culture
+    religion_definition = shinto
+}
+TYK = { # Tachi Yokut
+    color = rgb { 214 190 124 }
+    color2 = rgb { 92 73 64 }
+
+    culture_definition = south_valley_yokut_culture
+    religion_definition = pomo_shamanism
+}
+CCS = { # Chukchansi
+    color = rgb { 140 170 173 }
+    color2 = rgb { 92 73 64 }
+
+    culture_definition = south_valley_yokut_culture
+    religion_definition = pomo_shamanism
+}
+YLE = { # Yowlumne
+    color = rgb { 110 41 41 }
+    color2 = rgb { 92 73 64 }
+
+    culture_definition = south_valley_yokut_culture
+    religion_definition = pomo_shamanism
+}
+KYE = { # Koyeti
+    color = rgb { 99 128 101 }
+    color2 = rgb { 92 73 64 }
+
+    culture_definition = south_valley_yokut_culture
+    religion_definition = pomo_shamanism
+}
+WOW = { # Wowol
+    color = rgb { 162 151 173 }
+    color2 = rgb { 92 73 64 }
+
+    culture_definition = south_valley_yokut_culture
+    religion_definition = pomo_shamanism
+}

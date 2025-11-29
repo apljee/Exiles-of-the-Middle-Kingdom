@@ -1,0 +1,19 @@
+character_db = {
+    emk_lei_zihao = { # Lei Zihao
+        first_name = { name = name_lei }
+        last_name = { name = name_zihao }
+        culture = jiaodong_culture
+        religion = sanjiao
+        adm = 67
+        dip = 88
+        mil = 77
+        birth_date = 1314.11.12
+        female = no
+        birth = jinjiang
+        ruler_trait = charismatic_negotiator
+        tag = EMK
+        estate = burghers_estate
+        dynasty = zihao_dynasty
+        fertility = 50
+    }
+}

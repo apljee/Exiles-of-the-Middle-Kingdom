@@ -1,0 +1,78 @@
+locations = {
+	tachi = {
+		define_pop = {
+			culture = south_valley_yokut_culture
+			religion = pomo_shamanism
+			type = nobles
+			size = 0.034
+		}
+		define_pop = {
+			culture = south_valley_yokut_culture
+			religion = pomo_shamanism
+			type = tribesmen
+			size = 3.914
+		}
+		define_pop = {
+			culture = south_valley_yokut_culture
+			religion = pomo_shamanism
+			type = peasants
+			size = 0.819
+		}
+	}
+	pitkachi = {
+		define_pop = {
+			culture = south_valley_yokut_culture
+			religion = pomo_shamanism
+			type = nobles
+			size = 0.015
+		}
+		define_pop = {
+			culture = south_valley_yokut_culture
+			religion = pomo_shamanism
+			type = tribesmen
+			size = 1.422
+		}
+	}
+	hometwoli = {
+		define_pop = {
+			culture = south_valley_yokut_culture
+			religion = pomo_shamanism
+			type = nobles
+			size = 0.015
+		}
+		define_pop = {
+			culture = south_valley_yokut_culture
+			religion = pomo_shamanism
+			type = tribesmen
+			size = 1.422
+		}
+	}
+	koyeti = {
+		define_pop = {
+			culture = south_valley_yokut_cult..ure
+			religion = pomo_shamanism
+			type = nobles
+			size = 0.015
+		}
+		define_pop = {
+			culture = south_valley_yokut_culture
+			religion = pomo_shamanism
+			type = tribesmen
+			size = 1.422
+		}
+	}
+	tulumni = {
+		define_pop = {
+			culture = south_valley_yokut_culture
+			religion = pomo_shamanism
+			type = nobles
+			size = 0.015
+		}
+		define_pop = {
+			culture = south_valley_yokut_culture
+			religion = pomo_shamanism
+			type = tribesmen
+			size = 1.422
+		}
+	}
+}

@@ -1,0 +1,1129 @@
+﻿namespace = emk_events
+
+## Colonization Events
+# Placeholder implementation. Currently, this is the best idea I have for a barebones implementation, probably not the best way to do it though.
+# Ideally, pick a location that has adjacency to the player from a preconfigured list of locations and then fire [emk_events.2] targeting that location.
+# Currently, just copying the event with a (relatively) low monthly_chance and hoping that it can simulate the intended effect.
+
+# emk_event.1 is a semi-story event that informs the player that scripted colonization is beginning.
+# emk_event.2 is the template for all of the other scripted colonization events.
+
+emk_events.1 = {
+    type = country_event
+    title = emk_events.1.title
+    desc = emk_events.1.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.1.1
+        to = 1340.2.1
+        monthly_chance = 100
+    }
+    trigger = {
+        owns = location:awaswas
+    }
+    illustration_tags = {
+        10 = exterior
+        10 = regular
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.1.a
+        set_global_variable = emk_colonization_active
+        location:mewuk = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+        custom_tooltip = {
+            text = emk_colonization_warning
+        }
+        hidden_effect = {
+            location:kashaya = {
+                discover_location = c:EMK
+            }
+            location:onasatis = {
+                discover_location = c:EMK
+            }
+            location:suisin = {
+                discover_location = c:EMK
+            }
+            location:elkhorn_bay = {
+                discover_location = c:EMK
+            }
+            location:santa_cruz_coast = {
+                discover_location = c:EMK
+            }
+            location:marin_coast = {
+                discover_location = c:EMK
+            }
+        }
+    }
+}
+
+emk_events.2 = {
+    type = country_event
+    title = emk_events.2.title
+    desc = emk_events.2.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:mutsun = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.2.a
+        location:mutsun = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.3 = {
+    type = country_event
+    title = emk_events.3.title
+    desc = emk_events.3.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:tepotahal = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.3.a
+        location:tepotahal = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.4 = {
+    type = country_event
+    title = emk_events.4.title
+    desc = emk_events.4.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:tachi = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.4.a
+        location:tachi = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+        hidden_effect = {
+            location:tulare_lake = {
+                discover_location = c:EMK
+            }
+        }
+    }
+}
+
+emk_events.5 = {
+    type = country_event
+    title = emk_events.5.title
+    desc = emk_events.5.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:tulumni = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.5.a
+        location:tulumni = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.6 = {
+    type = country_event
+    title = emk_events.6.title
+    desc = emk_events.6.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:hometwoli = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.6.a
+        location:hometwoli = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+        hidden_effect = {
+            location:sierra_nevada_s = {
+                discover_location = c:EMK
+            }
+        }
+    }
+}
+
+emk_events.7 = {
+    type = country_event
+    title = emk_events.7.title
+    desc = emk_events.7.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:koyeti = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.7.a
+        location:koyeti = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.8 = {
+    type = country_event
+    title = emk_events.8.title
+    desc = emk_events.8.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:yawdanshi = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.5.a
+        location:yawdanshi = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+        hidden_effect = {
+            location:sierra_nevada_s = {
+                discover_location = c:EMK
+            }
+        }
+    }
+}
+
+emk_events.9 = {
+    type = country_event
+    title = emk_events.9.title
+    desc = emk_events.9.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:pitkachi = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.9.a
+        location:pitkachi = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.10 = {
+    type = country_event
+    title = emk_events.10.title
+    desc = emk_events.10.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:gashowu = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.10.a
+        location:gashowu = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+        hidden_effect = {
+            location:sierra_nevada_s = {
+                discover_location = c:EMK
+            }
+        }
+    }
+}
+
+emk_events.11 = {
+    type = country_event
+    title = emk_events.11.title
+    desc = emk_events.11.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:noptinte = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.11.a
+        location:noptinte = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.12 = {
+    type = country_event
+    title = emk_events.12.title
+    desc = emk_events.12.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:chawchila = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.12.a
+        location:chawchila = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.13 = {
+    type = country_event
+    title = emk_events.13.title
+    desc = emk_events.13.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:tawalimni = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.13.a
+        location:tawalimni = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.14 = {
+    type = country_event
+    title = emk_events.14.title
+    desc = emk_events.14.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:yashikumne = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.14.a
+        location:yashikumne = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.15 = {
+    type = country_event
+    title = emk_events.15.title
+    desc = emk_events.15.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:suisin = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.15.a
+        location:suisin = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.16 = {
+    type = country_event
+    title = emk_events.16.title
+    desc = emk_events.16.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:korusi = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.16.a
+        location:korusi = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.17 = {
+    type = country_event
+    title = emk_events.17.title
+    desc = emk_events.17.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:yo_loy = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.17.a
+        location:yo_loy = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.18 = {
+    type = country_event
+    title = emk_events.18.title
+    desc = emk_events.18.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:river_nomlaki = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.18.a
+        location:river_nomlaki = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.19 = {
+    type = country_event
+    title = emk_events.19.title
+    desc = emk_events.19.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:hill_nomlaki = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.19.a
+        location:hill_nomlaki = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.20 = {
+    type = country_event
+    title = emk_events.20.title
+    desc = emk_events.20.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:tlokyhan = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.5.a
+        location:tlokyhan = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.21 = {
+    type = country_event
+    title = emk_events.21.title
+    desc = emk_events.21.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:onasatis = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.21.a
+        location:onasatis = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.22 = {
+    type = country_event
+    title = emk_events.22.title
+    desc = emk_events.22.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:kashaya = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.22.a
+        location:kashaya = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.23 = {
+    type = country_event
+    title = emk_events.23.title
+    desc = emk_events.23.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:kulanapan = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.23.a
+        location:kulanapan = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}
+
+emk_events.24 = {
+    type = country_event
+    title = emk_events.24.title
+    desc = emk_events.24.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.2.1
+        to = 1365.1.1
+        monthly_chance = 1
+    }
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_colonization_active
+        location:ukomno_om = {
+            adjacent_to_owned_by = c:EMK
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+    option = {
+        name = emk_events.24.a
+        location:ukomno_om = {
+            change_location_owner = c:EMK
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:jiaodong_culture
+                religion = religion:sanjiao
+                size = 1.034
+            }
+        }
+    }
+}

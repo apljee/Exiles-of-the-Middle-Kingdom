@@ -1,0 +1,346 @@
+﻿l_english:
+
+#################
+### Countries ###
+#################
+
+EMK: "Yuǎndōng"
+EMK_ADJ: "Yuǎndōngrén"
+SHI: "Shinsekai"
+SHI_ADJ: "Shinsekai"
+TYK: "Tachi Yokuts"
+TYK_ADJ: "Yokuts"
+CCS: "Chukchansi"
+CCS_ADJ: "Chukchansi"
+YLE: "Yowlumne"
+YLE_ADJ: "Yowlumne"
+KYE: "Koyeti"
+KYE_ADJ: "Koyeti"
+WOW: "Wowol"
+WOW_ADJ: "Wowol"
+
+#################
+### Dynasties ###
+#################
+
+zihao_dynasty: "Zihao"
+
+##################
+### Characters ###
+##################
+
+name_lei: "Lei"
+name_zihao: "Zihao"
+
+#################
+### Locations ###
+#################
+
+### Mandarin // Chinese
+#aacistak_province
+awaswas.mandarin_language: "Yuǎndōng"
+chochenyo.mandarin_language: "Dōnglù"
+mutsun.mandarin_language: "Nángēn"
+tepotahal.mandarin_language: "Yùgǎng"
+#northern_yokut_province
+yashikumne.mandarin_language: "Huóshuǐzhèn"
+tawalimni.mandarin_language: "Gàndōng"
+chawchila.mandarin_language: "Xīshān"
+gashowu.mandarin_language: "Zhōngshān"
+noptinte.mandarin_language: "Nánhé"
+#southern_yokut_province
+tachi.mandarin_language: "Tiānchí"
+pitkachi.mandarin_language: "Qiángǔ"
+yawdanshi.mandarin_language: "Shānzhàng"
+koyeti.mandarin_language: "Nángǔ"
+hometwoli.mandarin_language: "Shāncūn"
+tulumni.mandarin_language: "Sēnglǚzhèn"
+#pomo_province
+mewuk.mandarin_language: "Zǐhàozhèn"
+onasatis.mandarin_language: "Dàsēnlín"
+kashaya.mandarin_language: "Hóngmù"
+kulanapan.mandarin_language: "Běilù"
+tlokyhan.mandarin_language: "Xīhé"
+ukomno_om.mandarin_language: "Liúshān"
+#nomlaki_province
+suisin.mandarin_language: "Tiānyuán"
+yo_loy.mandarin_language: "Gānhànxiàn"
+korusi.mandarin_language: "Gànshān"
+hill_nomlaki.mandarin_language: "Shèngshān"
+river_nomlaki.mandarin_language: "Shénshuǐ"
+
+###Japanese
+#chumash_province
+pimuu_nga.japanese_language: "Shinsekai"
+ineseno.japanese_language: "Nōsubei"
+channel_islands.japanese_language: "Kusashima"
+ventureno.japanese_language: "Kansōchi"
+yaanga.japanese_language: "Gyokōmura"
+payomkawichum.japanese_language: "Hariyama"
+kukamonga.japanese_language: "Kansōtani"
+
+
+#################
+### Provinces ###
+#################
+
+aacistak_province: "Yuǎndōng"
+
+################
+### Cultures ###
+################
+
+c_fusang: "Fusangrén"
+c_fusang_dialect: "Fusangrén"
+
+################
+### Tooltips ###
+################
+
+emk_thanks: "Thank you for playing Exiles of the Middle Kingdom! If you're interested in helping with development, localization, writing, or improving the authenticity of the mod, feel free to leave a comment on the mod's Steam Workshop page!"
+emk_startup_warning_01: "This option will place the Shāng (Burghers) in the forefront of your expedition."
+emk_startup_warning_02: "This option will place the Sēnglǚ (Clergy) in the forefront of your expedition."
+emk_startup_warning_03: "This option will place the Shì (Nobles) in the forefront of your expedition."
+emk_startup_warning_04: "This choice will affect what options you are able to take during setup!"
+emk_startup_warning_05: "The Korean Administrators could turn any ragged expedition into a well-oiled institution, but bringing minorities along may pose its' own risks..."
+emk_startup_warning_06: "The Jurchen Khans' ferocity is undeniable, yet bringing these frontier warlords far from their homelands may pose its' own risks..."
+emk_startup_warning_07: "The Tibetian Monks' presence would strengthen the moral heart of the voyage, yet some Sēnglǚ fear their doctrines could overshadow local teachings..."
+emk_startup_warning_08: "Our Shāng contacts will approach experienced guildsmen from Sakai."
+emk_startup_warning_09: "Our Sēnglǚ contacts will meet with the Shinshoku."
+emk_startup_warning_10: "Our Shì contacts are approached by a host of wandering Samurai."
+emk_shi_tt_01: "This option has additional bonuses since you allowed the Shì to lead your expedition."
+emk_shi_tt: "This option is available because you allowed the Shì to lead your expedition."
+emk_jurchen_tt: "This option is available because you allowed the Jurchen Khans to join your expedition."
+emk_shang_tt_01: "This option has additional bonuses since you allowed the Shāng to lead your expedition."
+emk_shang_tt: "This option is available because you allowed the Shāng to lead your expedition."
+emk_korean_tt: "This option is available because you allowed the Korean Administrators to join your expedition."
+emk_senglu_tt_01: "This option has additional bonuses since you allowed the Sēnglǚ to lead your expedition."
+emk_senglu_tt: "This option is available because you allowed the Sēnglǚ to lead your expedition."
+emk_tibet_tt: "This option is available because you allowed the Tibetian Monks to lead your expedition."
+emk_colonization_buff: "This option will immediately settle the populace on the frontier within your borders."
+emk_colonization_expel: "This option will expel the minority populace, forcing them north. Select this if you want to play as the minority. (Currently unimplemented)"
+emk_colonization_warning: "Colonization will proceed through events targeting adjacent locations - feel free to use charters if you are unhappy with the pace or target of events."
+emk_bonus_gold: "Taking the Japanese will grant money and population when you reach Fusang, though they may have their own interests in mind."
+emk_jp_remember: "Shinsekai will remember this..."
+emk_jp_vassal_warning: "Note: Vassals either do not yet  have any or have very little implemented storylines."
+flavor_emk_8_tt: "Populations living in the Shinshoku district have grown displeased."
+flavor_emk_9_tt: "Populations living in the Sakai district have grown displeased."
+flavor_emk_10_tt: "Populations living in the Samurai district have grown displeased."
+
+
+ #################
+### Modifiers ###
+#################
+
+STATIC_MODIFIER_NAME_emk_initial_optimism: "Initial Optimism"
+STATIC_MODIFIER_NAME_emk_jp_clergy_district: "Shinshoku District"
+STATIC_MODIFIER_NAME_emk_jp_burghers_district: "Sakai District"
+STATIC_MODIFIER_NAME_emk_jp_nobles_district: "Samurai District"
+STATIC_MODIFIER_NAME_emk_jp_clergy_mad_1: "Angry Shinshoku"
+STATIC_MODIFIER_NAME_emk_jp_clergy_mad_1b: "Unhappy Shinshoku"
+STATIC_MODIFIER_NAME_emk_jp_nobles_mad_1: "Angry Samurai"
+STATIC_MODIFIER_NAME_emk_jp_nobles_mad_1b: "Unhappy Samurai"
+STATIC_MODIFIER_NAME_emk_jp_burghers_mad_1: "Angry Guildsmen"
+STATIC_MODIFIER_NAME_emk_jp_burghers_mad_1b: "Unhappy Guildsmen"
+
+################
+### Advances ###
+################
+
+emk_frontier_born: "Yuǎndōng Frontiersmen"
+emk_frontier_born_desc: "After decades away from home, our people have begun to adapt to this new lifestyle on the frontier of Yuǎndōng. Now, they march forward, seeking to claim these lands in our name!"
+
+
+##############
+### Custom ###
+##############
+
+emk_estate_crown: "Zhuàngtài"
+emk_estate_nobles: "Shì"
+emk_estate_burghers: "Shāng"
+emk_estate_clergy: "Sēnglǚ"
+emk_estate_peasants: "Nóng"
+emk_estate_tribesmen: "Yuánshǐ"
+
+##############
+### Events ###
+##############
+
+### Startup Events
+flavor_chi_startup.1.title: "The Great Navigator"
+flavor_chi_startup.1.desc: "Lei Zihao began his career not as an explorer but as a scholar-monk fascinated by the old Fusang myths. Only later did he take to the sea, determined to verify what many others dismissed as poetic allegory.\n\nFor years, sailors along the ragged edge of the Eastern Seas whispered about the man who charted waters others feared to touch. Lei Zihao built his reputation through dedication and commitment - from the Kuril winds to the storm-wracked coasts north of Nippon, he mapped currents with uncanny precision, always returning with new notes, new ideas, and stories that defied belief. But what changed everything was the vision.\n\nHe spoke quietly of it: a great tree rising from the horizon, roots shining like molten gold beneath the waves. A dream, he said - or perhaps a sign. When he overlaid his charts upon the memory, it matched too neatly to dismiss. Somewhere far to the east, beyond all mapped borders, lay Fusang. The place the ancients wrote of."
+flavor_chi_startup.1.a: "Fusang awaits!"
+flavor_chi_startup.2.title: "A Stormy Night in Jìnjiāng"
+flavor_chi_startup.2.desc: "Thunder rolled through the Jìnjiāng's harbor as Lei Zihao convened his clandestine gathering. Three factions arrived in secret: the pragmatic Shāng, the devout Sēnglù, and the tradition-bound Shì. Their robes dripped with rain as they crowded around Lei Zihao's weathered charts.\n\nHe spoke plainly. Fusang was real. He had the coordinates. All he needed now were allies bold enough to chase a legend. The merchants saw profit. The monks saw destiny. The nobles saw glory. Lightning flashed, illuminating their faces as arguments erupted, deals whispered, and doubts gnawed. Yet beneath the storm's fury, a quiet resolve grew.\n\nThis meeting - improvised, rain-soaked, half-forbidden - would shape the future of every soul present. The only question remaining was which faction would lead the voyage alongside Lei Zihao."
+flavor_chi_startup.2.a: "The Shāng will lead us to Fusang!"
+flavor_chi_startup.2.b: "The Sēnglǚ will lead us to Fusang!"
+flavor_chi_startup.2.c: "The Shì will lead us to Fusang!"
+flavor_chi_startup.3.title: "Exiles of the Middle Kingdom"
+flavor_chi_startup.3.desc: "Shāng merchants have a nose for talent, and word reaches you that several Goryeo officials are stranded in port after a political shakeup back home. Lei Zihao meets them in a narrow teahouse, listening as they lay out meticulous charts, tax methods, and port management techniques. He sees their merits instantly; still, some Shāng elders whisper that inviting foreign bureaucrats risks overshadowing merchant authority once Fusang is reached. Their skills are priceless, but their influence might grow quickly."
+flavor_chi_startup.3.a: "Allow the Koreans to accompany the Shāng."
+flavor_chi_startup.3.b: "Refuse the Koreans passage to Fusang!"
+flavor_chi_startup.4.title: "Exiles of the Middle Kingdom"
+flavor_chi_startup.4.desc: "The Shì have always valued martial prowess, and few warriors command respect like the Jurchen Khans. A group of them, displaced by shifting alliances in the North, arrives offering riders, trackers, and survival expertise. Their presence would bolster the noble faction and intimidate any threat, but their independence might spark challenges to Shì authority later; some Shì question whether these proud riders can coexist with Chinese aristocrats once the voyage reaches Fusang. Others argue their strength is essential."
+flavor_chi_startup.4.a: "Allow the Jurchen to accompany the Shì"
+flavor_chi_startup.4.b: "Refuse the Jurchen passage to Fusang!"
+flavor_chi_startup.5.title: "Exiles of the Middle Kingdom"
+flavor_chi_startup.5.desc: "The Sēnglǚ speak of traveling monks from the Tibetan Plateau who recently reached Jìnjiāng, seeking passage East. They carry sacred texts, prayer wheels, and a calmness that radiates through any room. Lei Zihao meets them and listens as they describe prophetic visions of a distant land touched by divine resonance. Monks kneel before the Sēnglǚ, offering blessings and the promise of spiritual guidance during the perilous crossing. Their chants echo through Jìnjiāng's streets, drawing curious onlookers. Lei Zihao senses their sincerity, but some Sēnglǚ leaders worry about conflicting teachings and unsolicited visions."
+flavor_chi_startup.5.a: "Allow the Tibetians to accompany the Sēnglǚ."
+flavor_chi_startup.5.b: "Refuse the Tibetians passage to Fusang!"
+flavor_chi_startup.6.title: "The Grand Voyage Begins"
+flavor_chi_startup.6.desc: "The harbor at Jìnjiāng buzzed with restless energy as dawn crept over the water. Sailors hauled the last crates aboard, carpenters tightened ropes one final time, and Lei Zihao stood at the prow of his flagship, watching the tide roll in. His fleet had swollen beyond anything attempted in living memory, a patchwork of junks, treasure ships, riverboats refitted for open seas, and merchant craft pressed into service.\n\nWhispers rippled across the dockside crowds. Some called the voyage a fool's errand, a chase after a myth. Others believed Lei Zihao truly had charted the route to Fusang, the distant land said to cradle the world tree. Whatever the truth, the fleet's departure had drawn thousands to witness history.\n\nGongs rang out as sails unfurled. The fleet slipped from the harbor like a great serpent, each ship following the path of the one before it. The coastline thinned behind them, swallowed by mist and the endless swell of the ocean. Ahead lay the promise of discovery; The Grand Voyage had begun."
+flavor_chi_startup.6.a: "Our Grand Voyage begins!"
+flavor_chi_startup.7.title: "The Grand Voyage I"
+flavor_chi_startup.7.desc: "Lei Zihao's fleet anchored in a sheltered Japanese bay, its waters calm and clear. Fishermen paddled out to greet the arriving ships, offering dried squid, rice, and fresh vegetables in cautious exchange. The local magistrate welcomed the fleet with polite formality, but the Bay's villagers eyed the great treasure ships with awe.\n\nDuring the final restocking, Lei Zihao studied the coastline and spoke with interpreters who relayed rumors of Japanese families eager for new opportunities abroad. The expedition's numbers were expected to dwindle in the coming months at sea, and the addition of skilled laborers, farmers, and sailors could strengthen the colony once they reached Fusang.\n\nWord spread quickly among the locals. Some saw the voyage as a chance to escape hardship. Others viewed it as a path to glory. Dozens gathered on the shore, asking for passage. Lei Zihao found himself considering their request carefully. Extra mouths meant heavier strain on resources, but also more hands for the settlement to come. The fleet stood ready to depart as dusk settled over the harbor - the choice now lay with the expedition's leadership."
+flavor_chi_startup.7.a: "We have no room for the Japanese - we must depart immediately!"
+flavor_chi_startup.7.b: "We should hear out our Shāng contacts in Japan."
+flavor_chi_startup.7.c: "We should hear out our Shì contacts in Japan."
+flavor_chi_startup.7.d: "We should hear out our Sēnglǚ contacts in Japan."
+flavor_chi_startup.8.title: "The Guildsmen of Sakai"
+flavor_chi_startup.8.desc: "A delegation from Sakai stepped forward as the Shāng oversaw the final preparations. The Japanese guildsmen carried instruments of trade, exotic goods, and several chests of silver. They announced their intent to join the expedition and offered financial support, skilled workers, and armed escorts trained in defending merchant convoys.\n\nThe offer tempted many within the Shāng; these guildsmen represented wealth, pragmatism, and proven maritime acumen. Their presence could reinforce the commercial future of the venture, but Lei Zihao sensed tension. The Shāng understood better than anyone that merchant guilds competed fiercely. Bringing Sakai guildsmen could ignite rivalries or disrupt the fleet's unity. Ultimately, all eyes fell on Lei Zihao for the final decision."
+flavor_chi_startup.8.a: "We shall invite the Sakai guildsmen on our expedition - we must depart immediately!"
+flavor_chi_startup.8.b: "The Japanese will not be joining us - we must depart immediately."
+flavor_chi_startup.9.title: "The Honorable Samurai"
+flavor_chi_startup.9.desc: "As Lei Zihao consulted with the Shì, a group of armored Japanese warriors approached with stern composure. Their spokesman stated that his clan believed the voyage represented destiny. They sought to pledge their blades to the enterprise, expecting glory and land in Fusang.\n\nThe Shì considered their offer carefully. The samurai carried gravitas and elite training that could bolster any military effort. But the nobles also recognized the risks; Samurai honored their own traditions above all else, and their presence might complicate authority within the fleet. Ultimately, all eyes fell on Lei Zihao for the final decision."
+flavor_chi_startup.9.a: "We shall invite the honorable Samurai on our expedition - we must depart immediately!"
+flavor_chi_startup.9.b: "The Japanese will not be joining us - we must depart immediately."
+flavor_chi_startup.10.title: "The Wise Shinshoku"
+flavor_chi_startup.10.desc: "During evening prayers aboard the flagship, emissaries from a nearby temple requested an audience. They introduced themselves as Shinshoku, Japanese priests tasked with guiding communities in faith and ritual. Having heard of the Grand Voyage, they wished to join the expedition, believing their spiritual insight could aid the mission.\n\nThe Sēnglǚ monks murmured among themselves. The Shinshoku shared many teachings with them, yet their practices were distinct and steeped in Japanese tradition. Accepting them might enrich the expedition's spiritual guidance, but blending doctrines could prove unpredictable during times of crisis. Ultimately, all eyes fell on Lei Zihao for the final decision."
+flavor_chi_startup.10.a: "We shall invite the wise Shinshoku on our expedition - we must depart immediately!"
+flavor_chi_startup.10.b: "The Japanese will not be joining us - we must depart immediately."
+flavor_chi_startup.11.title: "The Grand Voyage II"
+flavor_chi_startup.11.desc: "The fleet pushed eastward into waters few Chinese sailors had ever charted. Weeks of steady progress built a sense of confidence among the crews, yet Lei Zihao remained uneasy. The sea around them had grown strangely still, almost watchful, as if waiting for a moment to strike. That moment arrived one moonless night when the clouds swallowed the stars and a heavy silence fell over the fleet. Hours later, a wall of wind and rain crashed down without warning.\n\nThe storm tore the formation apart instantly. Lanterns swung wildly as ships struggled to maintain course, their hulls screaming under the strain. Some captains attempted to lash their vessels together for stability, but the waves ripped them apart. Several transports capsized outright, their crews vanishing into the black water before any rescue could be attempted.\n\nLei Zihao's flagship survived only through a mix of discipline and luck. When the storm finally broke, the morning light revealed a fractured expedition. Hulls were split, sails shredded, and entire divisions unaccounted for. Supplies had been ruined, livestock drowned, and morale shattered. The fleet remained afloat, but only barely. Continuing the voyage would be a gamble with lives already stretched thin, yet turning back now felt impossible."
+flavor_chi_startup.11.a: "We must press on, Fusang awaits!"
+flavor_chi_startup.12.title: "The Grand Voyage III"
+flavor_chi_startup.12.desc: "When the first mountains of the New Coast rose on the horizon, many among the fleet believed they were hallucinating. Their rations had been cut to a handful of grains per day, their ships leaked constantly, and morale had been reduced to quiet endurance. Yet the peaks did not fade. By midday, they could see forests blanketing the hills and mist drifting from inland valleys.\n\nLandfall came with a mixture of relief and trepidation. The coastline was wide and unclaimed, shaped by long beaches and deep coves. Lei Zihao selected a promising harbor where fresh water flowed directly into the sea. The men and women who stepped ashore did so shakily, as if testing whether the earth would truly stay firm beneath their feet.\n\nThe landing site was surveyed thoroughly; the soil was fertile and the climate temperate. Strange animals grazed along the hillsides. The expedition, though wounded, had reached a land that could sustain them. A ceremony was held to mark the founding of Yuǎndōng, the new settlement born not from conquest but from survival.\n\nAs the last ships were anchored, the reality sank in: Our homeland was gone over the horizon, perhaps forever. The fleet would never again sail home. Their destiny now lay entirely in this unfamiliar world."
+flavor_chi_startup.12.a: "For Yuǎndōng, the first settlement in Fusang!"
+
+###Colonization Events
+emk_c_events.1.title: "Dōnglù, the Eastern Road"
+emk_c_events.1.desc: "The push eastward finally yields its first foothold: Dōnglù, a rough but determined outpost carved into the rolling grasslands beyond [GetCountry('EMK').GetName]. The settlers report fertile soil, broad hills, and quiet oak groves - strange, empty country that feels watched but untouched. Makeshift palisades rise from lumber hauled across the valley, and families begin marking plots for fields. Dōnglù is fragile, a fingertip extended into the unknown, but its inhabitants speak with pride. For the first time since landfall, Yuǎndōng has a true frontier - one built by its own people, with no one else to rely on."
+emk_c_events.a: "Yuǎndōng will prevail!"
+
+emk_events.1.title: "Frontier: Zǐhàozhèn"
+emk_events.1.desc: "A group of settlers struck north and have raised the first permanent outpost beyond Yuǎndōng’s immediate reach. They call it Zǐhàozhèn, a tribute to Lei Zihao’s leadership and the spirit that carried the expedition to this distant shore. Game is plentiful, water is clean, and the land is generous enough that even cautious settlers speak optimistically of the seasons ahead.\n\nZǐhàozhèn represents more than a camp. It marks the moment where Yuǎndōng’s people stop surviving and begin shaping the land around them. As word spreads, more volunteers prepare to follow, eager to claim a place in the growing frontier."
+emk_events.1.a: "Glory to Yuǎndōng!"
+emk_events.2.title: "Frontier: Nángēn"
+emk_events.2.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.2.a: "Glory to Yuǎndōng!"
+emk_events.3.title: "Frontier: Yùgǎng"
+emk_events.3.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.3.a: "Glory to Yuǎndōng!"
+emk_events.4.title: "Frontier: Tiānchí"
+emk_events.4.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.4.a: "Glory to Yuǎndōng!"
+emk_events.5.title: "Frontier: Sēnglǚzhèn"
+emk_events.5.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.5.a: "Glory to Yuǎndōng!"
+emk_events.6.title: "Frontier: Shāncūn"
+emk_events.6.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.6.a: "Glory to Yuǎndōng!"
+emk_events.7.title: "Frontier: Nángǔ"
+emk_events.7.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.7.a: "Glory to Yuǎndōng!"
+emk_events.8.title: "Frontier: Shānzhàng"
+emk_events.8.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.8.a: "Glory to Yuǎndōng!"
+emk_events.9.title: "Frontier: Qiángǔ"
+emk_events.9.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.9.a: "Glory to Yuǎndōng!"
+emk_events.10.title: "Frontier: Zhōngshān"
+emk_events.10.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.10.a: "Glory to Yuǎndōng!"
+emk_events.11.title: "Frontier: Nánhé"
+emk_events.11.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.11.a: "Glory to Yuǎndōng!"
+emk_events.12.title: "Frontier: Xīshān"
+emk_events.12.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.12.a: "Glory to Yuǎndōng!"
+emk_events.13.title: "Frontier: Gàndōng"
+emk_events.13.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.13.a: "Glory to Yuǎndōng!"
+emk_events.14.title: "Frontier: Huóshuǐzhèn"
+emk_events.14.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.14.a: "Glory to Yuǎndōng!"
+emk_events.15.title: "Frontier: Tiānyuán"
+emk_events.15.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.15.a: "Glory to Yuǎndōng!"
+emk_events.16.title: "Frontier: Gànshān"
+emk_events.16.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.16.a: "Glory to Yuǎndōng!"
+emk_events.17.title: "Frontier: Gānhànxiàn"
+emk_events.17.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.17.a: "Glory to Yuǎndōng!"
+emk_events.18.title: "Frontier: Shénshuǐ"
+emk_events.18.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.18.a: "Glory to Yuǎndōng!"
+emk_events.19.title: "Frontier: Shèngshān"
+emk_events.19.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.19.a: "Glory to Yuǎndōng!"
+emk_events.20.title: "Frontier: Xīhé"
+emk_events.20.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.20.a: "Glory to Yuǎndōng!"
+emk_events.21.title: "Frontier: Dàsēnlín"
+emk_events.21.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.21.a: "Glory to Yuǎndōng!"
+emk_events.22.title: "Frontier: Hóngmù"
+emk_events.22.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.22.a: "Glory to Yuǎndōng!"
+emk_events.23.title: "Frontier: Běilù"
+emk_events.23.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.23.a: "Glory to Yuǎndōng!"
+emk_events.24.title: "Frontier: Liúshān"
+emk_events.24.desc: "Reports arrive from the frontier that small groups of settlers have begun pushing deeper into the wilderness of Fusang. Guided by opportunity and the promise of land, they have established a modest foothold beyond our existing borders. It is little more than a cluster of tents and hastily cleared earth, but it marks clear progress. With time, resources, and support, this settlement may develop into something stable."
+emk_events.24.a: "Glory to Yuǎndōng!"
+
+# RGO Events
+emk_rgo_events.1.title: "Yùgǎng, The Jade Port"
+emk_rgo_events.1.desc: "Explorers mapping the rugged shoreline near Yùgǎng discovered a vein of brilliant green stone embedded in the cliffside. When cracked open, the pieces revealed themselves unmistakably as jade - pure, vibrant, and in quantities far greater than anyone expected.\n\nThis discovery has stirred debate across the settlement. Jade could attract artisans, merchants, and settlers seeking fortune. But tapping the resource would require redirecting manpower, and Yùgǎng’s fishing grounds remain some of the richest on the coast. The fishing families insist that tampering with their way of life risks long-term sustainability. Others see opportunity that should not be ignored. Jade of this quality could elevate Yuǎndōng’s standing, both culturally and economically."
+emk_rgo_events.1.a: "We must exploit these newfound jade deposits!"
+emk_rgo_events.1.b: "The traditional fishing industry must be preserved."
+
+
+ ### Phase I - Landfall
+flavor_emk.1.title: "The Future of [GetCountry('EMK').GetName]"
+flavor_emk.1.desc: "The first days ashore were frantic. The fleet now lay in pieces along the shoreline, its shattered planks and twisted beams telling the story of their grand Pacific crossing. Soon, towering piles of timber grew beside the growing camp. Lei Zihao gathered the officers and declared that [GetCountry('EMK').GetName] would rise from these remnants.\n\nArguments broke out quickly over what the supplies would be best used for. The [GetCountry('EMK').GetGovernment.GetEstateName('nobles_estate')] argue the importance of asserting authority, while the [GetCountry('EMK').GetGovernment.GetEstateName('clergy_estate')] mutter about the preservation of unity. The [GetCountry('EMK').GetGovernment.GetEstateName('burghers_estate')], meanwhile, bicker amongst themselves about the impending necessity of storehouses.\n\nEach faction pressed its vision for the settlement, but the timber piles were limited. [GetCountry('EMK').GetName] would begin with only one cornerstone project - the rest would have to wait."
+flavor_emk.1.a: "We must restore order before things get out of hand!"
+flavor_emk.1.b: "A temple will provide the calm the people need!"
+flavor_emk.1.c: "We will not survive if our food rots!"
+flavor_emk.2.title: "The Pride of [ShowLocationName('awaswas')]"
+flavor_emk.2.desc: "The sailors gathered to bid farewell to the flagship before it was broken apart. Lei Zihao reminded them that [ShowLocationName('awaswas')] could not afford sentiment; every beam mattered. As tools were prepared, the factions stepped forward.\n\nThe Shì propose the construction of a weaponsmith, to prepare for any threats that may lurk in this unfamiliar land. The [GetCountry('EMK').GetGovernment.GetEstateName('clergy_estate')], however, argue that construction of a monastery is of utmost importance. The pragmatic [GetCountry('EMK').GetGovernment.GetEstateName('burghers_estate')] suggest that investing in production and infrastructure is vital in securing long-term growth.\n\nOnce more, all eyes fell to Lei Zihao for the final decision."
+flavor_emk.2.a: "Who knows what lurks in the unknown? Prepare the weapons!"
+flavor_emk.2.b: "The monks are right - we are nothing without spirituality!"
+flavor_emk.2.c: "We must be practical - infrastructure is essential!"
+flavor_emk.3.title: "The Bureaucrats of [ShowLocationName('awaswas')]"
+flavor_emk.3.desc: "The Korean bureaucrats who joined the expedition began organizing themselves almost immediately; a cluster of Korean tents soon became a buzzing district within [ShowLocationName('awaswas')]. Clerks transcribed the fleet's logs, while officials drafted settlement plans. Their efficiency made them indispensable.\n\nTheir leaders approached Lei Zihao with a proposal: they wished for autonomy. They offered two paths. They could serve [ShowLocationName('awaswas')] as loyal administrators, strengthening governance, or they could establish a settlement of their own on the new continent."
+flavor_emk.3.a: "Guide them to [ShowLocationName('awaswas')]'s frontier. They will make excellent vassals!"
+flavor_emk.3.b: "Expel them from [ShowLocationName('awaswas')]. Let them fend for themselves in this new world!"
+flavor_emk.4.title: "The Khans of [ShowLocationName('awaswas')]"
+flavor_emk.4.desc: "The Jurchen riders scouted the surrounding hills with enthusiasm, in an effort to adapt to these wild new lands. Their hunters brought fresh game, and their warriors patrolled the outskirts of our settlement - but their Khans desired clarity. They presented two options to Lei Zihao: either allow them to swear fealty to [ShowLocationName('awaswas')] as guardians and protectors of its' borders, or allow them to establish their own colony on the continent."
+flavor_emk.4.a: "Guide them to [ShowLocationName('awaswas')]'s frontier. They will make excellent vassals!"
+flavor_emk.4.b: "Expel them from [ShowLocationName('awaswas')]. Let them fend for themselves in this new world!"
+flavor_emk.5.title: "The Monks of [ShowLocationName('awaswas')]"
+flavor_emk.5.desc: "The Tibetian monks began constructing small shrines within days, painting prayer flags and carving symbols into stone. Their calm presence comforted many settlers who had been wracked with trauma over the long voyage to Fusang.\n\nSoon after, they approached Lei Zihao with a prpoposal. Many among them would be happy to continue serving [ShowLocationName('awaswas')]'s spiritual needs, but some suggest a desire to found their own settlement. Either decision would shape the future of [ShowLocationName('awaswas')]'s spiritual foundations."
+flavor_emk.5.a: "Guide them to [ShowLocationName('awaswas')]'s frontier. They will make excellent vassals!"
+flavor_emk.5.b: "Expel them from [ShowLocationName('awaswas')]. Let them fend for themselves in this new world!"
+flavor_emk.6.title: "Those We Lost"
+flavor_emk.6.desc: "Only a handful of Japanese survivors reached [ShowLocationName('awaswas')]. Most of their ships vanished during the storm, leaving behind only drifting planks and unanswered questions. To honor the dead, a small Japanese quarter was established near the harbor. Even in mourning, the survivors vowed to carry their traditions into this new land."
+flavor_emk.6.a: "We must carry on for those we lost."
+flavor_emk.7.title: "The Ghost Fleet"
+flavor_emk.7.desc: "For some time, no one believes the watchtower reports of Japanese sails approaching from the south - but the ships are real. Battered and beaten, yet unmistakably organized. When they land at the shores of [ShowLocationName('awaswas')], they bow with practiced formality and deliver news that ripples through the settlement.\n\nThey explain themselves as members of the Grand Voyage; they thought [ShowLocationName('awaswas')] lost, and we assumed the same of them. Months earlier, they made landfall on a distant stretch of islands and established a provisional republic they have come to know as [GetCountry('SHI').GetName].\n\nTheir settlements survive, but only barely. Their people seek stability, trade, and protection. They formally request to join the Republic - as partners, not dependents - and offer an exchange of maps as a token of goodwill. They’ll stand with [ShowLocationName('awaswas')] in this strange land, if [ShowLocationName('awaswas')] will stand with them."
+flavor_emk.7.a: "If they wish to cling to their own settlements, they will not join [ShowLocationName('awaswas')]."
+flavor_emk.7.b: "The Shinshoku will make welcome vassals in this strange land."
+flavor_emk.7.c: "The Guildsmen of Sakai will make welcome vassals in this strange land."
+flavor_emk.7.d: "The Samurai will make welcome vassals in this strange land."
+flavor_emk.8.title: "The Shinshoku District"
+flavor_emk.8.desc: "The Shinshoku district is sliding into open religious hostility.\n\n[GetCountry('EMK').GetGovernment.GetEstateName('clergy_estate')] monks complain that the priests ignore civic regulations entirely, setting up temporary shrines in alleyways and riverbanks. The Shinshoku insist this is simply how their faith breathes, and accuse the monks of treating them as dangerous heretics. Arguments spill into markets and homes. A monk claims he was shoved during morning prayer; a priest claims his offerings were found scattered in the mud. Neither incident can be proven, but each retelling grows more dramatic. Settlers quietly pick sides, deepening the divide. The district feels ready to fracture, surely worsened by our stance with Shinsekai."
+flavor_emk.8.a: "They can go to [GetCountry('SHI').GetName] if their traditions matter so much!"
+flavor_emk.8.b: "Perhaps the Tibetian monks could extend an olive branch on our behalf?"
+ flavor_emk.9.title: "Trouble in the Sakai District"
+flavor_emk.9.desc: "Economic cooperation in [ShowLocationName('awaswas')] has collapsed into open resentment.\n\n[GetCountry('EMK').GetGovernment.GetEstateName('burghers_estate')] brokers complain the Sakai guildsmen manipulate weights and measures, destabilizing prices. The guildsmen fire back, insisting [GetCountry('EMK').GetGovernment.GetEstateName('burghers_estate')] recordkeepers falsify accounts to justify higher tariffs. Small incidents escalate rapidly: a delayed shipment becomes accusations of theft; a poorly negotiated contract becomes claims of extortion. The most worrying development is the appearance of “protection crews” hired by both sides, walking the market with a little too much purpose. Merchants now avoid mixed stalls entirely. In a colony where every coin matters, this economic civil war threatens the foundations of growth before they can properly form."
+flavor_emk.9.a: "The [GetCountry('EMK').GetGovernment.GetEstateName('burghers_estate')] must restore order in the Sakai District!"
+flavor_emk.9.b: "Our Korean administrators may be able to help restore order."
+flavor_emk.10.title: "The Dishonorable Samurai"
+flavor_emk.10.desc: "[ShowLocationName('awaswas')]’s martial tensions spike as [GetCountry('EMK').GetGovernment.GetEstateName('nobles_estate')] officials bristle at the samurai’s refusal to recognize local hierarchy. Reports describe samurai patrolling their district as though it were conquered territory, challenging guards, and criticizing [GetCountry('EMK').GetGovernment.GetEstateName('nobles_estate')] officers openly. The [GetCountry('EMK').GetGovernment.GetEstateName('nobles_estate')] retaliate with legal pressure, issuing summons, inspections, and demands for disarmament in public areas. The samurai interpret this as insult, provoking cold standoffs in the streets. Even ceremonial matters have become battlegrounds: who leads festivities, who guards which storehouse, whose orders hold priority. Neither side wants bloodshed, but neither shows the slightest willingness to yield. Pride sharpens into something harder, and [ShowLocationName('awaswas')] begins to feel the weight of two armies under one banner."
+flavor_emk.10.a: "Double the guards if you must! We must reign in control of the Samurai District."
+flavor_emk.10.b: "The Jurchen Khans may be a suitable answer to these ruffians."

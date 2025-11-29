@@ -1,0 +1,104 @@
+### EMK Modifiers
+
+# Phase I Story Modifiers
+emk_initial_optimism = {
+    game_data = {
+        category = country
+    }
+    global_population_growth = 0.05
+    global_estate_target_satisfaction = 0.05
+    global_construction_speed = 0.1
+    global_pop_promotion_speed = 0.1
+    global_monthly_control = 0.05
+}
+
+emk_jp_clergy_district = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.05
+    local_monthly_literacy = 0.01
+    monthly_harmony = 0.3
+}
+
+emk_jp_nobles_district = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.05
+    local_manpower = 0.010
+    monthly_prestige = 0.3
+}
+
+emk_jp_burghers_district = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.05
+    local_production_efficiency = 0.1
+    local_build_buildings_cost = -0.05
+}
+
+emk_jp_clergy_mad_1 = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.1
+    local_unrest = 0.33
+    tolerance_heretic = -1
+    convert_religion_cost_modifier = 1
+    monthly_clergy_estate_rebel_growth = 0.0025
+}
+
+emk_jp_clergy_mad_1b = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.1
+    local_unrest = 0.33
+    tolerance_heretic = -0.5
+    convert_religion_cost_modifier = 0.5
+}
+
+emk_jp_burghers_mad_1 = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.1
+    local_unrest = 0.33
+    monthly_inflation = 0.0003
+    trade_efficiency = -0.1
+    monthly_burghers_estate_rebel_growth = 0.0025
+}
+
+emk_jp_burghers_mad_1b = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.1
+    local_unrest = 0.33
+    trade_efficiency = -0.05
+    monthly_inflation = 0.0001
+}
+
+emk_jp_nobles_mad_1 = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.1
+    local_unrest = 0.33
+    local_monthly_control = -0.005
+    tax_income_efficiency = -0.1
+    monthly_nobles_estate_rebel_growth = 0.0025
+}
+
+emk_jp_nobles_mad_1b = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.1
+    local_unrest = 0.33
+    local_monthly_control = 0.0025
+    tax_income_efficiency = -0.05
+    monthly_inflation = 0.0001
+}

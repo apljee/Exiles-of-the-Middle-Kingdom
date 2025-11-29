@@ -1,0 +1,12 @@
+﻿{
+	"name":	"Exiles of the Middle Kingdom (Alpha)",
+	"id":	"",
+	"version":	"0.1",
+	"supported_game_version":	"1.0.*",
+	"short_description":	"Inspired by Third Odyssey, migrate East to the Americas in search of Fusang!",
+	"tags":	["Alternative history", "Characters", "Events", "Gameplay", "Religion"],
+	"relationships":	[],
+    "game_id" : "eu5",
+	"game_custom_data":	{
+}
+}

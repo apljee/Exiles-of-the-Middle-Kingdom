@@ -1,0 +1,172 @@
+countries = {
+    countries = {
+        EMK = { #Yuandong
+            capital = awaswas
+            dynasty = zihao_dynasty
+            country_rank = rank_duchy
+            type = location
+            starting_technology_level = 3
+            culture = jiaodong_culture
+            religion = sanjiao
+            currency_data = {
+                gold = 100
+                prestige = 50
+                stability = 10
+            }
+
+            government = {
+                ruler = emk_lei_zihao
+                type = republic
+                heir_selection = oligarchic_elective
+
+                parliament = {
+                    parliament_type = council
+                }
+            }
+
+        }
+        SHI = {
+            capital = pimuu_nga
+            country_rank = rank_county
+            type = location
+            starting_technology_level = 3
+            culture = saigoku_culture
+            religion = shinto
+            currency_data = {
+                gold = 100
+                prestige = 50
+                stability = 10
+            }
+
+            government = {
+                ruler = random
+                type = republic
+                heir_selection = oligarchic_elective
+
+                parliament = {
+                    parliament_type = council
+                }
+            }
+        }
+        TYK = {
+            capital = tachi
+            own_control_core = {
+                tachi
+            }
+            country_rank = rank_duchy
+            type = location
+            starting_technology_level = 0
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            currency_data = {
+                gold = 60
+                prestige = 25
+                stability = 20
+            }
+            government = {
+                ruler = random
+                type = tribe
+                heir_selection = tribal_oldest_male
+                parliament = {
+                    parliament_type = council
+                }
+            }
+        }
+        CCS = {
+            capital = pitkachi
+            own_control_core = {
+                pitkachi
+            }
+            country_rank = rank_county
+            type = location
+            starting_technology_level = 0
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            currency_data = {
+                gold = 30
+                prestige = 15
+                stability = 10
+            }
+            government = {
+                ruler = random
+                type = tribe
+                heir_selection = tribal_oldest_male
+                parliament = {
+                    parliament_type = council
+                }
+            }
+        }
+        YLE = {
+            capital = hometwoli
+            own_control_core = {
+                hometwoli
+            }
+            country_rank = rank_county
+            type = location
+            starting_technology_level = 0
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            currency_data = {
+                gold = 30
+                prestige = 15
+                stability = 10
+            }
+            government = {
+                ruler = random
+                type = tribe
+                heir_selection = tribal_oldest_male
+                parliament = {
+                    parliament_type = council
+                }
+            }
+        }
+        KYE = {
+            capital = koyeti
+            own_control_core = {
+                koyeti
+            }
+            country_rank = rank_county
+            type = location
+            starting_technology_level = 0
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            currency_data = {
+                gold = 30
+                prestige = 15
+                stability = 10
+            }
+            government = {
+                ruler = random
+                type = tribe
+                heir_selection = tribal_oldest_male
+                parliament = {
+                    parliament_type = council
+                }
+            }
+        }
+        WOW = {
+            capital = tulumni
+            own_control_core = {
+                tulumni
+            }
+            country_rank = rank_county
+            type = location
+            starting_technology_level = 0
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            currency_data = {
+                gold = 30
+                prestige = 15
+                stability = 10
+            }
+            government = {
+                ruler = random
+                type = tribe
+                heir_selection = tribal_oldest_male
+                parliament = {
+                    parliament_type = council
+                }
+            }
+        }
+    }
+}

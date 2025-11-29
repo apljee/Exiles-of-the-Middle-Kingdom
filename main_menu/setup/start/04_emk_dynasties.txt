@@ -1,0 +1,6 @@
+dynasty_manager = {
+    zihao_dynasty = {
+        name = { name = zihao_dynasty }
+        home = awaswas
+    }
+}

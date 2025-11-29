@@ -1,0 +1,1534 @@
+﻿namespace = flavor_emk
+
+flavor_emk.1 = { #The Future of Yuandong
+    type = country_event
+    title = flavor_emk.1.title
+    desc = flavor_emk.1.desc
+    fire_only_once = yes
+
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1338.1.1
+        to = 1338.6.1
+        monthly_chance = 100
+    }
+
+    trigger = {
+        owns = location:awaswas
+    }
+
+    illustration_tags = {
+        10 = exterior
+        10 = regular
+    }
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        character:emk_lei_zihao ?= {
+            save_scope_as = target_character
+        }
+    }
+
+    option = {
+        name = flavor_emk.1.a
+        hidden_effect = {
+            location:awaswas = {
+                construct_building = {
+                    building_type = building_type:lumber_mill
+                    cost_multiplier = 0
+                    instant = yes
+                }
+                construct_building = {
+                    building_type = building_type:stone_quarry
+                    cost_multiplier = 0
+                    instant = yes
+                }
+                construct_building = {
+                    building_type = building_type:clay_pit
+                    cost_multiplier = 0
+                    instant = yes
+                }
+            }
+            location:mutsun = {
+                discover_location = c:EMK
+            }
+            location:chochenyo = {
+                discover_location = c:EMK
+            }
+            location:san_francisco_bay = {
+                discover_location = c:EMK
+            }
+            location:mewuk = {
+                discover_location = c:EMK
+            }
+        }
+        location:awaswas = {
+            change_location_rank = location_rank:town
+            construct_building = {
+                building_type = building_type:provincial_garrison
+                cost_multiplier = 0
+                instant = yes
+            }
+        }
+        add_estate_satisfaction = {
+            type = estate_type:nobles_estate
+            value = 0.05
+        }
+        add_country_modifier = {
+            modifier = emk_initial_optimism
+            years = 1
+        }
+        trigger_event_non_silently = {
+            id = flavor_emk.2
+            days = { 7 14 }
+        }
+        trigger_event_non_silently = {
+            id = emk_events.1
+            years = { 1 2 }
+        }
+        if = {
+            limit = { has_global_variable = emk_startup_korea }
+            trigger_event_non_silently = {
+                id = flavor_emk.3
+                days = { 14 28 }
+            }
+        }
+        if = {
+            limit = { has_global_variable = emk_startup_jurchen }
+            trigger_event_non_silently = {
+                id = flavor_emk.4
+                days = { 14 28 }
+            }
+        }
+        if = {
+            limit = { has_global_variable = emk_startup_tibet }
+            trigger_event_non_silently = {
+                id = flavor_emk.5
+                days = { 14 28 }
+            }
+        }
+    }
+    option = {
+        name = flavor_emk.1.b
+        research_advance = advance_type:emk_frontier_born
+        hidden_effect = {
+            location:awaswas = {
+                construct_building = {
+                    building_type = building_type:lumber_mill
+                    cost_multiplier = 0
+                    instant = yes
+                }
+                construct_building = {
+                    building_type = building_type:stone_quarry
+                    cost_multiplier = 0
+                    instant = yes
+                }
+                construct_building = {
+                    building_type = building_type:clay_pit
+                    cost_multiplier = 0
+                    instant = yes
+                }
+            }
+            location:mutsun = {
+                discover_location = c:EMK
+            }
+            location:chochenyo = {
+                discover_location = c:EMK
+            }
+            location:san_francisco_bay = {
+                discover_location = c:EMK
+            }
+            location:mewuk = {
+                discover_location = c:EMK
+            }
+        }
+        location:awaswas = {
+            change_location_rank = location_rank:town
+            construct_building = {
+                building_type = building_type:temple
+                cost_multiplier = 0
+                instant = yes
+            }
+        }
+        add_estate_satisfaction = {
+            type = estate_type:clergy_estate
+            value = 0.05
+        }
+        add_country_modifier = {
+            modifier = emk_initial_optimism
+            years = 1
+        }
+        trigger_event_non_silently = {
+            id = flavor_emk.2
+            days = { 7 14 }
+        }
+        if = {
+            limit = { has_global_variable = emk_startup_korea }
+            trigger_event_non_silently = {
+                id = flavor_emk.3
+                days = { 14 28 }
+            }
+        }
+        if = {
+            limit = { has_global_variable = emk_startup_jurchen }
+            trigger_event_non_silently = {
+                id = flavor_emk.4
+                days = { 14 28 }
+            }
+        }
+        if = {
+            limit = { has_global_variable = emk_startup_tibet }
+            trigger_event_non_silently = {
+                id = flavor_emk.5
+                days = { 14 28 }
+            }
+        }
+        trigger_event_non_silently = {
+            id = emk_events.1
+            years = { 1 2 }
+        }
+    }
+    option = {
+        name = flavor_emk.1.c
+        research_advance = advance_type:emk_frontier_born
+        hidden_effect = {
+            location:awaswas = {
+                construct_building = {
+                    building_type = building_type:lumber_mill
+                    cost_multiplier = 0
+                    instant = yes
+                }
+                construct_building = {
+                    building_type = building_type:stone_quarry
+                    cost_multiplier = 0
+                    instant = yes
+                }
+                construct_building = {
+                    building_type = building_type:clay_pit
+                    cost_multiplier = 0
+                    instant = yes
+                }
+            }
+            location:mutsun = {
+                discover_location = c:EMK
+            }
+            location:chochenyo = {
+                discover_location = c:EMK
+            }
+            location:san_francisco_bay = {
+                discover_location = c:EMK
+            }
+            location:mewuk = {
+                discover_location = c:EMK
+            }
+        }
+        location:awaswas = {
+            change_location_rank = location_rank:town
+            construct_building = {
+                building_type = building_type:granary
+                cost_multiplier = 0
+                instant = yes
+            }
+        }
+        add_estate_satisfaction = {
+            type = estate_type:burghers_estate
+            value = 0.05
+        }
+        add_country_modifier = {
+            modifier = emk_initial_optimism
+            years = 1
+        }
+        trigger_event_non_silently = {
+            id = flavor_emk.2
+            days = { 7 14 }
+        }
+        if = {
+            limit = { has_global_variable = emk_startup_korea }
+            trigger_event_non_silently = {
+                id = flavor_emk.3
+                days = { 14 28 }
+            }
+        }
+        if = {
+            limit = { has_global_variable = emk_startup_jurchen }
+            trigger_event_non_silently = {
+                id = flavor_emk.4
+                days = { 14 28 }
+            }
+        }
+        if = {
+            limit = { has_global_variable = emk_startup_tibet }
+            trigger_event_non_silently = {
+                id = flavor_emk.5
+                days = { 14 28 }
+            }
+        }
+        trigger_event_non_silently = {
+            id = emk_events.1
+            years = { 1 2 }
+        }
+    }
+}
+
+flavor_emk.2 = {
+    type = country_event
+    title = flavor_emk.2.title
+    desc = flavor_emk.2.desc
+    fire_only_once = yes
+
+    trigger = {
+        owns = location:awaswas
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+    }
+    option = {
+        name = flavor_emk.2.a
+        if = {
+            limit = { has_global_variable = emk_startup_shi }
+            custom_tooltip = {
+                text = emk_shi_tt_01
+            }
+            add_stability = 10
+            location:awaswas = {
+                construct_building = {
+                    building_type = building_type:stockade
+                    cost_multiplier = 0
+                    instant = yes
+                }
+            }
+
+        }
+        location:awaswas = {
+            construct_building = {
+                building_type = building_type:weapon_guild
+                cost_multiplier = 0
+                instant = yes
+            }
+        }
+        add_estate_satisfaction = {
+            type = estate_type:nobles_estate
+            value = 0.05
+        }
+        add_estate_satisfaction = {
+            type = estate_type:burghers_estate
+            value = -0.075
+        }
+        add_estate_satisfaction = {
+            type = estate_type:clergy_estate
+            value = -0.075
+        }
+    }
+    option = {
+        name = flavor_emk.2.b
+        if = {
+            limit = { has_global_variable = emk_startup_senglu }
+            custom_tooltip = {
+                text = emk_senglu_tt_01
+            }
+            add_prestige = 10
+            location:awaswas = {
+                construct_building = {
+                    building_type = building_type:scriptorium
+                    cost_multiplier = 0
+                    instant = yes
+                }
+                construct_building = {
+                    building_type = building_type:paper_guild
+                    cost_multiplier = 0
+                    instant = yes
+                }
+            }
+
+        }
+        location:awaswas = {
+            construct_building = {
+                building_type = building_type:monastery
+                cost_multiplier = 0
+                instant = yes
+            }
+        }
+        add_estate_satisfaction = {
+            type = estate_type:nobles_estate
+            value = -0.075
+        }
+        add_estate_satisfaction = {
+            type = estate_type:burghers_estate
+            value = -0.075
+        }
+        add_estate_satisfaction = {
+            type = estate_type:clergy_estate
+            value = 0.05
+        }
+    }
+    option = {
+        name = flavor_emk.2.c
+        if = {
+            limit = { has_global_variable = emk_startup_shang }
+            custom_tooltip = {
+                text = emk_shang_tt_01
+            }
+            add_gold = 50
+            location:awaswas = {
+                construct_building = {
+                    building_type = building_type:mason
+                    cost_multiplier = 0
+                    instant = yes
+                }
+                construct_building = {
+                    building_type = building_type:marketplace
+                    cost_multiplier = 0
+                    instant = yes
+                }
+            }
+
+        }
+        location:awaswas = {
+            construct_building = {
+                building_type = building_type:irrigation_systems
+                cost_multiplier = 0
+                instant = yes
+            }
+        }
+        add_estate_satisfaction = {
+            type = estate_type:nobles_estate
+            value = -0.075
+        }
+        add_estate_satisfaction = {
+            type = estate_type:burghers_estate
+            value = 0.05
+        }
+        add_estate_satisfaction = {
+            type = estate_type:clergy_estate
+            value = -0.075
+        }
+    }
+} #need to do modifiers still
+
+flavor_emk.3 = {
+    type = country_event
+    title = flavor_emk.3.title
+    desc = flavor_emk.3.desc
+    fire_only_once = yes
+
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_startup_korea
+    }
+
+    illustration_tags = {
+        10 = happy
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect ={
+            foreground = pop_type:burghers
+            background = pop_type:burghers
+        }
+    }
+
+    option = {
+        name = flavor_emk.3.a
+        ai_chance = {
+            base = 100
+        }
+        location:chochenyo = {
+            change_raw_material = goods:rice
+        }
+        hidden_effect = {
+            location:yashikumne = {
+                discover_location = c:EMK
+            }
+            location:suisin = {
+                discover_location = c:EMK
+            }
+            location:noptinte = {
+                discover_location = c:EMK
+            }
+            location:chochenyo = {
+                change_location_owner = c:EMK
+                change_max_raw_material_workers = 1
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:korean_culture
+                    religion = religion:mahayana
+                    size = 2.112
+                    literacy = 12
+                }
+                add_pop = {
+                    type = pop_type:laborers
+                    culture = culture:korean_culture
+                    religion = religion:mahayana
+                    size = 1.566
+                    literacy = 12
+                }
+            }
+            location:awaswas = {
+                add_pop = {
+                    type = pop_type:burghers
+                    culture = culture:korean_culture
+                    religion = religion:mahayana
+                    size = 0.289
+                    literacy = 12
+                }
+            }
+        }
+        custom_tooltip = {
+            text = emk_colonization_buff
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_global_variable = emk_startup_jp_clergy
+                    has_global_variable = emk_startup_jp_burghers
+                    has_global_variable = emk_startup_jp_nobles
+                }
+            }
+            trigger_event_non_silently = {
+                id = flavor_emk.6
+                days = { 14 28 }
+            }
+        }
+    }
+    option = {
+        name = flavor_emk.3.b
+        custom_tooltip = {
+            text = emk_colonization_expel
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_global_variable = emk_startup_jp_clergy
+                    has_global_variable = emk_startup_jp_burghers
+                    has_global_variable = emk_startup_jp_nobles
+                }
+            }
+            trigger_event_non_silently = {
+                id = flavor_emk.6
+                days = { 14 28 }
+            }
+        }
+    }
+} #need to finish options and modifiers
+
+flavor_emk.4 = {
+    type = country_event
+    title = flavor_emk.4.title
+    desc = flavor_emk.4.desc
+    fire_only_once = yes
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_startup_jurchen
+    }
+    illustration_tags = {
+        10 = happy
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:soldiers
+            background = pop_type:soldiers
+        }
+    }
+    option = {
+        name = flavor_emk.4.a
+        location:chochenyo = {
+            change_raw_material = goods:horses
+        }
+        hidden_effect = {
+            location:yashikumne = {
+                discover_location = c:EMK
+            }
+            location:suisin = {
+                discover_location = c:EMK
+            }
+            location:noptinte = {
+                discover_location = c:EMK
+            }
+            location:chochenyo = {
+                change_max_raw_material_workers = 1
+                change_location_owner = c:EMK
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:jurchen_culture
+                    religion = religion:tengri
+                    size = 2.112
+                    literacy = 12
+                }
+                add_pop = {
+                    type = pop_type:laborers
+                    culture = culture:jurchen_culture
+                    religion = religion:tengri
+                    size = 1.566
+                    literacy = 12
+                }
+            }
+            location:awaswas = {
+                add_pop = {
+                    type = pop_type:nobles
+                    culture = culture:jurchen_culture
+                    religion = religion:tengri
+                    size = 0.145
+                    literacy = 12
+                }
+                add_pop = {
+                    type = pop_type:soldiers
+                    culture = culture:jurchen_culture
+                    religion = religion:tengri
+                    size = 0.144
+                    literacy = 12
+                }
+            }
+        }
+        custom_tooltip = {
+            text = emk_colonization_buff
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_global_variable = emk_startup_jp_clergy
+                    has_global_variable = emk_startup_jp_burghers
+                    has_global_variable = emk_startup_jp_nobles
+                }
+            }
+            trigger_event_non_silently = {
+                id = flavor_emk.6
+                days = { 14 28 }
+            }
+        }
+    }
+    option = {
+        name = flavor_emk.4.b
+        custom_tooltip = {
+            text = emk_colonization_expel
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_global_variable = emk_startup_jp_clergy
+                    has_global_variable = emk_startup_jp_burghers
+                    has_global_variable = emk_startup_jp_nobles
+                }
+            }
+            trigger_event_non_silently = {
+                id = flavor_emk.6
+                days = { 14 28 }
+            }
+        }
+    }
+} #need to finish options and modifiers
+
+flavor_emk.5 = {
+    type = country_event
+    title = flavor_emk.5.title
+    desc = flavor_emk.5.desc
+    fire_only_once = yes
+    trigger = {
+        owns = location:awaswas
+        has_global_variable = emk_startup_jurchen
+    }
+    illustration_tags = {
+        10 = happy
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:clergy
+            background = pop_type:clergy
+        }
+    }
+    option = {
+        name = flavor_emk.5.a
+        location:chochenyo = {
+            change_raw_material = goods:livestock
+        }
+        hidden_effect = {
+            location:yashikumne = {
+                discover_location = c:EMK
+            }
+            location:suisin = {
+                discover_location = c:EMK
+            }
+            location:noptinte = {
+                discover_location = c:EMK
+            }
+            location:chochenyo = {
+                change_max_raw_material_workers = 1
+                change_location_owner = c:EMK
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:utsang_culture
+                    religion = religion:tibetan_buddhism
+                    size = 2.012
+                    literacy = 12
+                }
+                add_pop = {
+                    type = pop_type:laborers
+                    culture = culture:utsang_culture
+                    religion = religion:tibetan_buddhism
+                    size = 1.446
+                    literacy = 12
+                }
+                add_pop = {
+                    type = pop_type:clergy
+                    culture = culture:utsang_culture
+                    religion = religion:tibetan_buddhism
+                    size = 0.212
+                    literacy = 12
+                }
+            }
+            location:awaswas = {
+                add_pop = {
+                    type = pop_type:clergy
+                    culture = culture:utsang_culture
+                    religion = religion:tibetan_buddhism
+                    size = 0.289
+                    literacy = 12
+                }
+            }
+        }
+        custom_tooltip = {
+            text = emk_colonization_buff
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_global_variable = emk_startup_jp_clergy
+                    has_global_variable = emk_startup_jp_burghers
+                    has_global_variable = emk_startup_jp_nobles
+                }
+            }
+            trigger_event_non_silently = {
+                id = flavor_emk.6
+                days = { 14 28 }
+            }
+        }
+    }
+    option = {
+        name = flavor_emk.5.b
+        custom_tooltip = {
+            text = emk_colonization_expel
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_global_variable = emk_startup_jp_clergy
+                    has_global_variable = emk_startup_jp_burghers
+                    has_global_variable = emk_startup_jp_nobles
+                }
+            }
+            trigger_event_non_silently = {
+                id = flavor_emk.6
+                days = { 14 28 }
+            }
+        }
+    }
+} #need to finish options and modifiers
+
+flavor_emk.6 = {
+    type = country_event
+    title = flavor_emk.6.title
+    desc = flavor_emk.6.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1338.6.1
+        to = 1339.1.1
+        monthly_chance = 50
+    }
+    illustration_tags = {
+        10 = exterior
+        10 = regular
+    }
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+    }
+    option = {
+        name = flavor_emk.6.a
+        trigger_event_silently = {
+            id = flavor_emk.7
+            years = { 1 2 }
+        }
+        hidden_effect = {
+            location:pimuu_nga = {
+                change_location_owner = c:SHI
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:saigoku_culture
+                    religion = religion:shinto
+                    size = 2.200
+                    literacy = 20
+                }
+                add_pop = {
+                    type = pop_type:laborers
+                    culture = culture:saigoku_culture
+                    religion = religion:shinto
+                    size = 0.600
+                    literacy = 20
+                }
+                add_pop = {
+                    type = pop_type:burghers
+                    culture = culture:saigoku_culture
+                    religion = religion:shinto
+                    size = 0.200
+                    literacy = 20
+                }
+                add_pop = {
+                    type = pop_type:clergy
+                    culture = culture:saigoku_culture
+                    religion = religion:shinto
+                    size = 0.100
+                    literacy = 20
+                }
+                add_pop = {
+                    type = pop_type:nobles
+                    culture = culture:saigoku_culture
+                    religion = religion:shinto
+                    size = 0.100
+                    literacy = 20
+                }
+            }
+        } #change location / add pops for island
+        location:awaswas = {
+            add_pop = {
+                type = pop_type:peasants
+                culture = culture:saigoku_culture
+                religion = religion:shinto
+                size = 0.600
+                literacy = 20
+            }
+            if = {
+                limit = { has_global_variable = emk_startup_jp_burghers }
+                add_location_modifier = {
+                    modifier = emk_jp_burghers_district
+                    years = -1
+                }
+                add_pop = {
+                    type = pop_type:burghers
+                    culture = culture:saigoku_culture
+                    religion = religion:shinto
+                    size = 0.100
+                    literacy = 20
+                }
+            }
+            if = {
+                limit = { has_global_variable = emk_startup_jp_clergy }
+                add_location_modifier = {
+                    modifier = emk_jp_clergy_district
+                    years = -1
+                }
+                add_pop = {
+                    type = pop_type:clergy
+                    culture = culture:saigoku_culture
+                    religion = religion:shinto
+                    size = 0.100
+                    literacy = 20
+                }
+            }
+            if = {
+                limit = { has_global_variable = emk_startup_jp_nobles }
+                add_location_modifier = {
+                    modifier = emk_jp_nobles_district
+                    years = -1
+                }
+                add_pop = {
+                    type = pop_type:nobles
+                    culture = culture:saigoku_culture
+                    religion = religion:shinto
+                    size = 0.100
+                    literacy = 20
+                }
+            }
+        }
+    }
+}
+
+flavor_emk.7 = {
+    type = country_event
+    title = flavor_emk.7.title
+    desc = flavor_emk.7.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1341.1.1
+        to = 1343.1.1
+        monthly_chance = 25
+    }
+    trigger = {
+        owns = location:awaswas
+        OR = {
+            has_global_variable = emk_startup_jp_clergy
+            has_global_variable = emk_startup_jp_burghers
+            has_global_variable = emk_startup_jp_nobles
+        }
+        has_fired_unique_event = flavor_emk.6
+    }
+    option = {
+        name = flavor_emk.7.a
+        hidden_effect = {
+            location:santa_barbara_coast = {
+                discover_location = c:EMK
+            }
+            location:monterey_coast = {
+                discover_location = c:EMK
+            }
+            location:san_catalina_island = {
+                discover_location = c:EMK
+            }
+            location:north_canal = {
+                discover_location = c:EMK
+            }
+            location:south_canal = {
+                discover_location = c:EMK
+            }
+            location:san_diego_bay = {
+                discover_location = c:EMK
+            }
+            location:orange_cove = {
+                discover_location = c:EMK
+            }
+            location:los_angeles_bay = {
+                discover_location = c:EMK
+            }
+            location:ineseno = {
+                discover_location = c:EMK
+            }
+            location:pimuu_nga = {
+                discover_location = c:EMK
+            }
+            location:channel_islands = {
+                discover_location = c:EMK
+            }
+            location:ventureno = {
+                discover_location = c:EMK
+            }
+            location:yaanga = {
+                discover_location = c:EMK
+            }
+            location:kukamonga = {
+                discover_location = c:EMK
+            }
+            location:payomkawichum = {
+                discover_location = c:EMK
+            }
+            location:chumash_range = {
+                discover_location = c:EMK
+            }
+        } #location discoveries - EMK
+        hidden_effect = {
+            location:santa_barbara_coast = {
+                discover_location = c:SHI
+            }
+            location:monterey_coast = {
+                discover_location = c:SHI
+            }
+            location:san_catalina_island = {
+                discover_location = c:SHI
+            }
+            location:north_canal = {
+                discover_location = c:SHI
+            }
+            location:south_canal = {
+                discover_location = c:SHI
+            }
+            location:san_diego_bay = {
+                discover_location = c:SHI
+            }
+            location:orange_cove = {
+                discover_location = c:SHI
+            }
+            location:los_angeles_bay = {
+                discover_location = c:SHI
+            }
+            location:ineseno = {
+                discover_location = c:SHI
+            }
+            location:pimuu_nga = {
+                discover_location = c:SHI
+            }
+            location:channel_islands = {
+                discover_location = c:SHI
+            }
+            location:ventureno = {
+                discover_location = c:SHI
+            }
+            location:yaanga = {
+                discover_location = c:SHI
+            }
+            location:kukamonga = {
+                discover_location = c:SHI
+            }
+            location:payomkawichum = {
+                discover_location = c:SHI
+            }
+            location:chumash_range = {
+                discover_location = c:SHI
+            }
+        } #location discoveries - SHI
+        hidden_effect = {
+            remove_global_variable = emk_startup_jp_clergy
+            remove_global_variable = emk_startup_jp_nobles
+            remove_global_variable = emk_startup_jp_burghers
+            set_global_variable = emk_startup_jp_rejected
+        } #global variables
+        custom_tooltip = {
+            text = emk_jp_remember
+        }
+    }
+    option = {
+        name = flavor_emk.7.b
+        trigger = {
+            has_global_variable = emk_startup_jp_clergy
+        }
+        hidden_effect = {
+            location:santa_barbara_coast = {
+                discover_location = c:EMK
+            }
+            location:monterey_coast = {
+                discover_location = c:EMK
+            }
+            location:san_catalina_island = {
+                discover_location = c:EMK
+            }
+            location:santa_cruz_cove = {
+                discover_location = c:EMK
+            }
+            location:north_canal = {
+                discover_location = c:EMK
+            }
+            location:south_canal = {
+                discover_location = c:EMK
+            }
+            location:san_diego_bay = {
+                discover_location = c:EMK
+            }
+            location:orange_cove = {
+                discover_location = c:EMK
+            }
+            location:los_angeles_bay = {
+                discover_location = c:EMK
+            }
+            location:ineseno = {
+                discover_location = c:EMK
+            }
+            location:pimuu_nga = {
+                discover_location = c:EMK
+            }
+            location:channel_islands = {
+                discover_location = c:EMK
+            }
+            location:ventureno = {
+                discover_location = c:EMK
+            }
+            location:yaanga = {
+                discover_location = c:EMK
+            }
+            location:kukamonga = {
+                discover_location = c:EMK
+            }
+            location:payomkawichum = {
+                discover_location = c:EMK
+            }
+            location:chumash_range = {
+                discover_location = c:EMK
+            }
+        } #location discoveries - EMK
+        hidden_effect = {
+            location:santa_barbara_coast = {
+                discover_location = c:SHI
+            }
+            location:santa_cruz_cove = {
+                discover_location = c:EMK
+            }
+            location:monterey_coast = {
+                discover_location = c:SHI
+            }
+            location:san_catalina_island = {
+                discover_location = c:SHI
+            }
+            location:north_canal = {
+                discover_location = c:SHI
+            }
+            location:south_canal = {
+                discover_location = c:SHI
+            }
+            location:san_diego_bay = {
+                discover_location = c:SHI
+            }
+            location:orange_cove = {
+                discover_location = c:SHI
+            }
+            location:los_angeles_bay = {
+                discover_location = c:SHI
+            }
+            location:ineseno = {
+                discover_location = c:SHI
+            }
+            location:pimuu_nga = {
+                discover_location = c:SHI
+            }
+            location:channel_islands = {
+                discover_location = c:SHI
+            }
+            location:ventureno = {
+                discover_location = c:SHI
+            }
+            location:yaanga = {
+                discover_location = c:SHI
+            }
+            location:kukamonga = {
+                discover_location = c:SHI
+            }
+            location:payomkawichum = {
+                discover_location = c:SHI
+            }
+            location:chumash_range = {
+                discover_location = c:SHI
+            }
+        } #location discoveries - SHI
+        hidden_effect = {
+            remove_global_variable = emk_startup_jp_clergy
+            remove_global_variable = emk_startup_jp_nobles
+            remove_global_variable = emk_startup_jp_burghers
+            set_global_variable = emk_startup_jp_accepted
+        } #global variables
+        c:EMK = {
+            create_union = c:SHI
+        }
+        custom_tooltip = {
+            text = emk_jp_vassal_warning
+        }
+    }
+    option = {
+        name = flavor_emk.7.c
+        trigger = {
+            has_global_variable = emk_startup_jp_burghers
+        }
+        hidden_effect = {
+            location:santa_barbara_coast = {
+                discover_location = c:EMK
+            }
+            location:monterey_coast = {
+                discover_location = c:EMK
+            }
+            location:san_catalina_island = {
+                discover_location = c:EMK
+            }
+            location:santa_cruz_cove = {
+                discover_location = c:EMK
+            }
+            location:north_canal = {
+                discover_location = c:EMK
+            }
+            location:south_canal = {
+                discover_location = c:EMK
+            }
+            location:san_diego_bay = {
+                discover_location = c:EMK
+            }
+            location:orange_cove = {
+                discover_location = c:EMK
+            }
+            location:los_angeles_bay = {
+                discover_location = c:EMK
+            }
+            location:ineseno = {
+                discover_location = c:EMK
+            }
+            location:pimuu_nga = {
+                discover_location = c:EMK
+            }
+            location:channel_islands = {
+                discover_location = c:EMK
+            }
+            location:ventureno = {
+                discover_location = c:EMK
+            }
+            location:yaanga = {
+                discover_location = c:EMK
+            }
+            location:kukamonga = {
+                discover_location = c:EMK
+            }
+            location:payomkawichum = {
+                discover_location = c:EMK
+            }
+            location:chumash_range = {
+                discover_location = c:EMK
+            }
+        } #location discoveries - EMK
+        hidden_effect = {
+            location:santa_barbara_coast = {
+                discover_location = c:SHI
+            }
+            location:santa_cruz_cove = {
+                discover_location = c:EMK
+            }
+            location:monterey_coast = {
+                discover_location = c:SHI
+            }
+            location:san_catalina_island = {
+                discover_location = c:SHI
+            }
+            location:north_canal = {
+                discover_location = c:SHI
+            }
+            location:south_canal = {
+                discover_location = c:SHI
+            }
+            location:san_diego_bay = {
+                discover_location = c:SHI
+            }
+            location:orange_cove = {
+                discover_location = c:SHI
+            }
+            location:los_angeles_bay = {
+                discover_location = c:SHI
+            }
+            location:ineseno = {
+                discover_location = c:SHI
+            }
+            location:pimuu_nga = {
+                discover_location = c:SHI
+            }
+            location:channel_islands = {
+                discover_location = c:SHI
+            }
+            location:ventureno = {
+                discover_location = c:SHI
+            }
+            location:yaanga = {
+                discover_location = c:SHI
+            }
+            location:kukamonga = {
+                discover_location = c:SHI
+            }
+            location:payomkawichum = {
+                discover_location = c:SHI
+            }
+            location:chumash_range = {
+                discover_location = c:SHI
+            }
+        } #location discoveries - SHI
+        hidden_effect = {
+            remove_global_variable = emk_startup_jp_clergy
+            remove_global_variable = emk_startup_jp_nobles
+            remove_global_variable = emk_startup_jp_burghers
+            set_global_variable = emk_startup_jp_accepted
+        } #global variables
+        c:EMK = {
+            create_union = c:SHI
+        }
+        custom_tooltip = {
+            text = emk_jp_vassal_warning
+        }
+    }
+    option = {
+        name = flavor_emk.7.d
+        trigger = {
+            has_global_variable = emk_startup_jp_nobles
+        }
+        hidden_effect = {
+            location:santa_barbara_coast = {
+                discover_location = c:EMK
+            }
+            location:monterey_coast = {
+                discover_location = c:EMK
+            }
+            location:san_catalina_island = {
+                discover_location = c:EMK
+            }
+            location:santa_cruz_cove = {
+                discover_location = c:EMK
+            }
+            location:north_canal = {
+                discover_location = c:EMK
+            }
+            location:south_canal = {
+                discover_location = c:EMK
+            }
+            location:san_diego_bay = {
+                discover_location = c:EMK
+            }
+            location:orange_cove = {
+                discover_location = c:EMK
+            }
+            location:los_angeles_bay = {
+                discover_location = c:EMK
+            }
+            location:ineseno = {
+                discover_location = c:EMK
+            }
+            location:pimuu_nga = {
+                discover_location = c:EMK
+            }
+            location:channel_islands = {
+                discover_location = c:EMK
+            }
+            location:ventureno = {
+                discover_location = c:EMK
+            }
+            location:yaanga = {
+                discover_location = c:EMK
+            }
+            location:kukamonga = {
+                discover_location = c:EMK
+            }
+            location:payomkawichum = {
+                discover_location = c:EMK
+            }
+            location:chumash_range = {
+                discover_location = c:EMK
+            }
+        } #location discoveries - EMK
+        hidden_effect = {
+            location:santa_barbara_coast = {
+                discover_location = c:SHI
+            }
+            location:santa_cruz_cove = {
+                discover_location = c:EMK
+            }
+            location:monterey_coast = {
+                discover_location = c:SHI
+            }
+            location:san_catalina_island = {
+                discover_location = c:SHI
+            }
+            location:north_canal = {
+                discover_location = c:SHI
+            }
+            location:south_canal = {
+                discover_location = c:SHI
+            }
+            location:san_diego_bay = {
+                discover_location = c:SHI
+            }
+            location:orange_cove = {
+                discover_location = c:SHI
+            }
+            location:los_angeles_bay = {
+                discover_location = c:SHI
+            }
+            location:ineseno = {
+                discover_location = c:SHI
+            }
+            location:pimuu_nga = {
+                discover_location = c:SHI
+            }
+            location:channel_islands = {
+                discover_location = c:SHI
+            }
+            location:ventureno = {
+                discover_location = c:SHI
+            }
+            location:yaanga = {
+                discover_location = c:SHI
+            }
+            location:kukamonga = {
+                discover_location = c:SHI
+            }
+            location:payomkawichum = {
+                discover_location = c:SHI
+            }
+            location:chumash_range = {
+                discover_location = c:SHI
+            }
+        } #location discoveries - SHI
+        hidden_effect = {
+            remove_global_variable = emk_startup_jp_clergy
+            remove_global_variable = emk_startup_jp_nobles
+            remove_global_variable = emk_startup_jp_burghers
+            set_global_variable = emk_startup_jp_accepted
+        } #global variables
+        custom_tooltip = {
+            text = emk_jp_vassal_warning
+        }
+    }
+}
+
+flavor_emk.8 = {
+    type = country_event
+    title = flavor_emk.8.title
+    desc = flavor_emk.8.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.1.1
+        to = 1350.1.1
+        monthly_chance = 25
+    }
+    trigger = {
+        has_global_variable = emk_startup_jp_rejected
+        location:awaswas = {
+            has_location_modifier = emk_jp_clergy_district
+        }
+        tag = EMK
+        country_exists = c:SHI
+    }
+    illustration_tags = {
+        10 = interior
+        10 = angry
+    }
+    immediate = {
+        event_illustration_estate_effect = {
+            background = estate_type:clergy_estate
+            foreground = estate_type:clergy_estate
+        }
+    }
+    option = {
+        name = flavor_emk.8.a
+        custom_tooltip = {
+            text = flavor_emk_8_tt
+        }
+        location:awaswas = {
+            add_location_modifier = {
+                modifier = emk_jp_clergy_mad_1
+                years = 5
+            }
+        }
+    }
+    option = {
+        name = flavor_emk.8.b
+        trigger = {
+            has_global_variable = emk_startup_tibet
+        }
+        custom_tooltip = {
+            text = emk_tibet_tt
+        }
+        location:awaswas = {
+            add_location_modifier = {
+                modifier = emk_jp_clergy_mad_1b
+                years = 3
+            }
+        }
+    }
+}
+
+flavor_emk.9 = {
+    type = country_event
+    title = flavor_emk.9.title
+    desc = flavor_emk.9.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.1.1
+        to = 1350.1.1
+        monthly_chance = 25
+    }
+    trigger = {
+        has_global_variable = emk_startup_jp_rejected
+        location:awaswas = {
+            has_location_modifier = emk_jp_burghers_district
+        }
+        tag = EMK
+        country_exists = c:SHI
+    }
+    illustration_tags = {
+        10 = interior
+        10 = angry
+    }
+    immediate = {
+        event_illustration_estate_effect = {
+            background = estate_type:burghers_estate
+            foreground = estate_type:burghers_estate
+        }
+    }
+    option = {
+        name = flavor_emk.9.a
+        custom_tooltip = {
+            text = flavor_emk_9_tt
+        }
+        location:awaswas = {
+            add_location_modifier = {
+                modifier = emk_jp_burghers_mad_1
+                years = 5
+            }
+        }
+    }
+    option = {
+        name = flavor_emk.9.b
+        trigger = {
+            has_global_variable = emk_startup_korea
+        }
+        custom_tooltip = {
+            text = emk_korean_tt
+        }
+        location:awaswas = {
+            add_location_modifier = {
+                modifier = emk_jp_burghers_mad_1b
+                years = 3
+            }
+        }
+    }
+}
+
+flavor_emk.10 = {
+    type = country_event
+    title = flavor_emk.10.title
+    desc = flavor_emk.10.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.1.1
+        to = 1350.1.1
+        monthly_chance = 25
+    }
+    trigger = {
+        has_global_variable = emk_startup_jp_rejected
+        location:awaswas = {
+            has_location_modifier = emk_jp_nobles_district
+        }
+        tag = EMK
+        country_exists = c:SHI
+    }
+    illustration_tags = {
+        10 = interior
+        10 = angry
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            background = pop_type:soldiers
+            foreground = pop_type:soldiers
+        }
+    }
+    option = {
+        name = flavor_emk.10.a
+        custom_tooltip = {
+            text = flavor_emk_10_tt
+        }
+        location:awaswas = {
+            add_location_modifier = {
+                modifier = emk_jp_nobles_mad_1
+                years = 5
+            }
+        }
+    }
+    option = {
+        name = flavor_emk.10.b
+        trigger = {
+            has_global_variable = emk_startup_jurchen
+        }
+        custom_tooltip = {
+            text = emk_jurchen_tt
+        }
+        location:awaswas = {
+            add_location_modifier = {
+                modifier = emk_jp_nobles_mad_1b
+                years = 3
+            }
+        }
+    }
+}
