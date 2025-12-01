@@ -10,7 +10,7 @@ locations = {
 			culture = south_valley_yokut_culture
 			religion = pomo_shamanism
 			type = tribesmen
-			size = 3.914
+			size = 1.914
 		}
 		define_pop = {
 			culture = south_valley_yokut_culture
@@ -63,16 +63,340 @@ locations = {
 	}
 	tulumni = {
 		define_pop = {
-			culture = south_valley_yokut_culture
+			culture = tulumni_culture
 			religion = pomo_shamanism
 			type = nobles
 			size = 0.015
 		}
 		define_pop = {
-			culture = south_valley_yokut_culture
+			culture = tulumni_culture
 			religion = pomo_shamanism
 			type = tribesmen
 			size = 1.422
 		}
 	}
+	ramaytush = {
+		define_pop = {
+			culture = ohlone_culture
+			religion = pomo_shamanism
+			type = tribesmen
+			size = 0.690
+		}
+    }
+	popeloutchom = {
+        define_pop = {
+            culture = ohlone_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.470
+        }
+    }
+    tamien = {
+        define_pop = {
+            culture = ohlone_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.470
+        }
+    }
+    muwekma = {
+        define_pop = {
+            culture = ohlone_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.690
+        }
+    }
+    chalon = {
+        define_pop = {
+            culture = salinan_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.470
+        }
+        define_pop = {
+            culture = ohlone_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.220
+        }
+    }
+    esselen = {
+        define_pop = {
+            culture = ohlone_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.470
+        }
+        define_pop = {
+            culture = salinan_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.220
+        }
+    }
+    west_salinan = {
+        define_pop = {
+            culture = salinan_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 1.120
+        }
+    }
+    east_salinan = {
+        define_pop = {
+            culture = salinan_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.470
+        }
+    }
+    obispeno = {
+        define_pop = {
+            culture = chumash_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.690
+        }
+    }
+    amuwu = {
+        define_pop = {
+            culture = chumash_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.690
+        }
+    }
+    kuyam = {
+        define_pop = {
+            culture = chumash_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.690
+        }
+    }
+    barbareno = {
+        define_pop = {
+            culture = chumash_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.780
+        }
+    }
+    pimu = {
+        define_pop = {
+            culture = chumash_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.110
+        }
+    }
+    tataviam = {
+        define_pop = {
+            culture = chumash_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.440
+        }
+    }
+    wegitiu = {
+        define_pop = {
+            culture = tulumni_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.990
+        }
+    }
+    tuhohi = {
+        define_pop = {
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.810
+        }
+        define_pop = {
+            culture = tulumni_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.090
+        }
+    }
+    paleuyami = {
+        define_pop = {
+            culture = tulumni_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.220
+        }
+        define_pop = {
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.690
+        }
+    }
+    wowol = {
+        define_pop = {
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.765
+        }
+    }
+    chunut = {
+        define_pop = {
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.550
+        }
+    }
+    choinimni = {
+        define_pop = {
+            culture = foothill_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.435
+        }
+    }
+    north_yawdanshi = {
+        define_pop = {
+            culture = foothill_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.810
+        }
+    }
+    nutunutu = {
+        define_pop = {
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.690
+        }
+    }
+    wechihit = {
+        define_pop = {
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+    }
+    choynok = {
+        define_pop = {
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 1.190
+        }
+    }
+    graton = {
+        define_pop = {
+            culture = miwok_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.770
+        }
+    }
+    ahwahnee = {
+        define_pop = {
+            culture = north_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+    }
+    lisjan = {
+        define_pop = {
+            culture = miwok_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.390
+        }
+        define_pop = {
+            culture = patwin_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+    }
+    anamas = {
+        define_pop = {
+            culture = micewal_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+    }
+    orestima = {
+        define_pop = {
+            culture = north_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+        define_pop = {
+            culture = miwok_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.190
+        }
+    }
+    cahto = {
+        define_pop = {
+            culture = pomo_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+    }
+    olamentko = {
+        define_pop = {
+            culture = north_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+    }
+    petaluma = {
+        define_pop = {
+            culture = north_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+    }
+    lekahtewutko = {
+        define_pop = {
+            culture = nomlaki_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+    }
+    hookooeko = {
+        define_pop = {
+            culture = north_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+    }
+    omomi = {
+        define_pop = {
+            culture = pomo_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+    }
+    olompali = {
+        define_pop = {
+            culture = north_valley_yokut_culture
+            religion = pomo_shamanism
+            type = tribesmen
+            size = 0.890
+        }
+    }
 }

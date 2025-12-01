@@ -36,6 +36,8 @@ flavor_emk.1 = { #The Future of Yuandong
         name = flavor_emk.1.a
         hidden_effect = {
             location:awaswas = {
+                change_raw_material = goods:rice
+                change_max_raw_material_workers = 1
                 construct_building = {
                     building_type = building_type:lumber_mill
                     cost_multiplier = 0
@@ -51,8 +53,22 @@ flavor_emk.1 = { #The Future of Yuandong
                     cost_multiplier = 0
                     instant = yes
                 }
+                if = {
+                    limit = { global_var:emk_shi_inf >= 5 }
+                    construct_building = {
+                        building_type = building_type:jewelry_guild
+                        cost_multiplier = 0
+                        instant = yes
+                    }
+                } # if shi influence greater than 5, construct bonus jewelry guild
             }
-            location:mutsun = {
+            location:ramaytush = {
+                discover_location = c:EMK
+            }
+            location:muwekma = {
+                discover_location = c:EMK
+            }
+            location:tamien = {
                 discover_location = c:EMK
             }
             location:chochenyo = {
@@ -61,18 +77,16 @@ flavor_emk.1 = { #The Future of Yuandong
             location:san_francisco_bay = {
                 discover_location = c:EMK
             }
-            location:mewuk = {
-                discover_location = c:EMK
-            }
-        }
+        } #change RGO to rice, add basic infrastructure buildings, conditional shi influence check
+        research_advance = advance_type:emk_frontier_born
         location:awaswas = {
             change_location_rank = location_rank:town
             construct_building = {
-                building_type = building_type:provincial_garrison
+                building_type = building_type:emk_watchtower
                 cost_multiplier = 0
                 instant = yes
             }
-        }
+        } #change Yuandong to town, construct Watchtower
         add_estate_satisfaction = {
             type = estate_type:nobles_estate
             value = 0.05
@@ -116,6 +130,8 @@ flavor_emk.1 = { #The Future of Yuandong
         research_advance = advance_type:emk_frontier_born
         hidden_effect = {
             location:awaswas = {
+                change_raw_material = goods:rice
+                change_max_raw_material_workers = 1
                 construct_building = {
                     building_type = building_type:lumber_mill
                     cost_multiplier = 0
@@ -131,17 +147,28 @@ flavor_emk.1 = { #The Future of Yuandong
                     cost_multiplier = 0
                     instant = yes
                 }
+                if = {
+                    limit = { global_var:emk_senglu_inf >= 5 }
+                    construct_building = {
+                        building_type = building_type:paper_guild
+                        cost_multiplier = 0
+                        instant = yes
+                    }
+                } # if senglu influence greater than 5, construct bonus paper guild
             }
-            location:mutsun = {
+            location:ramaytush = {
+                discover_location = c:EMK
+            }
+            location:muwekma = {
+                discover_location = c:EMK
+            }
+            location:tamien = {
                 discover_location = c:EMK
             }
             location:chochenyo = {
                 discover_location = c:EMK
             }
             location:san_francisco_bay = {
-                discover_location = c:EMK
-            }
-            location:mewuk = {
                 discover_location = c:EMK
             }
         }
@@ -196,6 +223,8 @@ flavor_emk.1 = { #The Future of Yuandong
         research_advance = advance_type:emk_frontier_born
         hidden_effect = {
             location:awaswas = {
+                change_raw_material = goods:rice
+                change_max_raw_material_workers = 1
                 construct_building = {
                     building_type = building_type:lumber_mill
                     cost_multiplier = 0
@@ -211,17 +240,28 @@ flavor_emk.1 = { #The Future of Yuandong
                     cost_multiplier = 0
                     instant = yes
                 }
+                if = {
+                    limit = { global_var:emk_shang_inf >= 5 }
+                    construct_building = {
+                        building_type = building_type:lacquerware_guild
+                        cost_multiplier = 0
+                        instant = yes
+                    }
+                } # if shang influence greater than 5, construct bonus lacquerware guild
             }
-            location:mutsun = {
+            location:ramaytush = {
+                discover_location = c:EMK
+            }
+            location:muwekma = {
+                discover_location = c:EMK
+            }
+            location:tamien = {
                 discover_location = c:EMK
             }
             location:chochenyo = {
                 discover_location = c:EMK
             }
             location:san_francisco_bay = {
-                discover_location = c:EMK
-            }
-            location:mewuk = {
                 discover_location = c:EMK
             }
         }
@@ -308,14 +348,14 @@ flavor_emk.2 = {
                 }
             }
 
-        }
+        } #if shi taken on startup
         location:awaswas = {
             construct_building = {
                 building_type = building_type:weapon_guild
                 cost_multiplier = 0
                 instant = yes
             }
-        }
+        } # construct weapon guild in Yuandong
         add_estate_satisfaction = {
             type = estate_type:nobles_estate
             value = 0.05
@@ -350,14 +390,14 @@ flavor_emk.2 = {
                 }
             }
 
-        }
+        } #if senglu taken on startup
         location:awaswas = {
             construct_building = {
                 building_type = building_type:monastery
                 cost_multiplier = 0
                 instant = yes
             }
-        }
+        } #construct monastery in Yuandong
         add_estate_satisfaction = {
             type = estate_type:nobles_estate
             value = -0.075
@@ -392,14 +432,14 @@ flavor_emk.2 = {
                 }
             }
 
-        }
+        } #if shang taken on startup
         location:awaswas = {
             construct_building = {
                 building_type = building_type:irrigation_systems
                 cost_multiplier = 0
                 instant = yes
             }
-        }
+        } #construct irrigation in Yuandong
         add_estate_satisfaction = {
             type = estate_type:nobles_estate
             value = -0.075
@@ -442,20 +482,17 @@ flavor_emk.3 = {
         ai_chance = {
             base = 100
         }
-        location:chochenyo = {
-            change_raw_material = goods:rice
-        }
         hidden_effect = {
-            location:yashikumne = {
+            location:popeloutchom = {
                 discover_location = c:EMK
             }
             location:suisin = {
                 discover_location = c:EMK
             }
-            location:noptinte = {
+            location:mewuk = {
                 discover_location = c:EMK
             }
-            location:chochenyo = {
+            location:ramaytush = {
                 change_location_owner = c:EMK
                 change_max_raw_material_workers = 1
                 add_pop = {
@@ -542,20 +579,17 @@ flavor_emk.4 = {
     }
     option = {
         name = flavor_emk.4.a
-        location:chochenyo = {
-            change_raw_material = goods:horses
-        }
         hidden_effect = {
-            location:yashikumne = {
+            location:popeloutchom = {
                 discover_location = c:EMK
             }
             location:suisin = {
                 discover_location = c:EMK
             }
-            location:noptinte = {
+            location:mewuk = {
                 discover_location = c:EMK
             }
-            location:chochenyo = {
+            location:ramaytush = {
                 change_max_raw_material_workers = 1
                 change_location_owner = c:EMK
                 add_pop = {
@@ -649,20 +683,17 @@ flavor_emk.5 = {
     }
     option = {
         name = flavor_emk.5.a
-        location:chochenyo = {
-            change_raw_material = goods:livestock
-        }
         hidden_effect = {
-            location:yashikumne = {
+            location:popeloutchom = {
                 discover_location = c:EMK
             }
             location:suisin = {
                 discover_location = c:EMK
             }
-            location:noptinte = {
+            location:mewuk = {
                 discover_location = c:EMK
             }
-            location:chochenyo = {
+            location:ramaytush = {
                 change_max_raw_material_workers = 1
                 change_location_owner = c:EMK
                 add_pop = {
@@ -802,6 +833,18 @@ flavor_emk.6 = {
                 }
             }
         } #change location / add pops for island
+        if = {
+            limit = { location:ramaytush = { is_owned_by_target_or_subject = { owner = c:EMK } } }
+            location:ramaytush = {
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:saigoku_culture
+                    religion = religion:shinto
+                    size = 0.600
+                    literacy = 20
+                }
+            }
+        }
         location:awaswas = {
             add_pop = {
                 type = pop_type:peasants

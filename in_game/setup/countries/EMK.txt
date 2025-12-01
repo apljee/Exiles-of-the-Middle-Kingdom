@@ -50,3 +50,17 @@ WOW = { # Wowol
     culture_definition = south_valley_yokut_culture
     religion_definition = pomo_shamanism
 }
+PYM = { # Paleuyami
+    color = rgb { 130 106 20 }
+    color2 = rgb { 92 73 64 }
+
+    culture_definition = south_valley_yokut_culture
+    religion_definition = pomo_shamanism
+}
+TLU = { # Tulumni
+    color = rgb { 52 117 88 }
+    color2 = rgb { 92 73 64 }
+
+    culture_definition = south_valley_yokut_culture
+    religion_definition = pomo_shamanism
+}

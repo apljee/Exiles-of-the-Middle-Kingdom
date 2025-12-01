@@ -51,7 +51,7 @@ countries = {
         TYK = {
             capital = tachi
             own_control_core = {
-                tachi
+                tachi choynok
             }
             country_rank = rank_duchy
             type = location
@@ -123,7 +123,7 @@ countries = {
         KYE = {
             capital = koyeti
             own_control_core = {
-                koyeti
+                koyeti chunut
             }
             country_rank = rank_county
             type = location
@@ -145,14 +145,62 @@ countries = {
             }
         }
         WOW = {
-            capital = tulumni
+            capital = wowol
             own_control_core = {
-                tulumni
+                wowol
             }
             country_rank = rank_county
             type = location
             starting_technology_level = 0
             culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            currency_data = {
+                gold = 30
+                prestige = 15
+                stability = 10
+            }
+            government = {
+                ruler = random
+                type = tribe
+                heir_selection = tribal_oldest_male
+                parliament = {
+                    parliament_type = council
+                }
+            }
+        }
+        PYM = {
+            capital = paleuyami
+            own_control_core = {
+                paleuyami tuhohi
+            }
+            country_rank = rank_county
+            type = location
+            starting_technology_level = 0
+            culture = south_valley_yokut_culture
+            religion = pomo_shamanism
+            currency_data = {
+                gold = 30
+                prestige = 15
+                stability = 10
+            }
+            government = {
+                ruler = random
+                type = tribe
+                heir_selection = tribal_oldest_male
+                parliament = {
+                    parliament_type = council
+                }
+            }
+        }
+        TLU = {
+            capital = tulumni
+            own_control_core = {
+                tulumni wegitiu
+            }
+            country_rank = rank_county
+            type = location
+            starting_technology_level = 0
+            culture = tulumni_culture
             religion = pomo_shamanism
             currency_data = {
                 gold = 30

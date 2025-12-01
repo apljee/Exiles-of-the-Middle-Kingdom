@@ -1,5 +1,64 @@
 ﻿l_english:
 
+ #################
+ ### Locations ###
+ #################
+
+ ### Mandarin // Chinese
+ #aacistak_province
+ awaswas.mandarin_language: "Yuǎndōng"
+ tamien.mandarin_language: "Dōnglù"
+ ramaytush.mandarin_language: "Náncūn"
+ muwekma.mandarin_language: "Chénjiàng"
+ mutsun.mandarin_language: "Nángēn"
+ tepotahal.mandarin_language: "Yùgǎng"
+ #northern_yokut_province
+ yashikumne.mandarin_language: "Huóshuǐzhèn"
+ tawalimni.mandarin_language: "Gàndōng"
+ chawchila.mandarin_language: "Xīshān"
+ gashowu.mandarin_language: "Zhōngshān"
+ noptinte.mandarin_language: "Nánhé"
+ #southern_yokut_province
+ tachi.mandarin_language: "Tiānchí"
+ pitkachi.mandarin_language: "Qiángǔ"
+ yawdanshi.mandarin_language: "Shānzhàng"
+ koyeti.mandarin_language: "Nángǔ"
+ hometwoli.mandarin_language: "Shāncūn"
+ tulumni.mandarin_language: "Sēnglǚzhèn"
+ #pomo_province
+ mewuk.mandarin_language: "Zǐhàozhèn"
+ onasatis.mandarin_language: "Dàsēnlín"
+ kashaya.mandarin_language: "Hóngmù"
+ kulanapan.mandarin_language: "Běilù"
+ tlokyhan.mandarin_language: "Xīhé"
+ ukomno_om.mandarin_language: "Liúshān"
+ #nomlaki_province
+ suisin.mandarin_language: "Tiānyuán"
+ yo_loy.mandarin_language: "Gānhànxiàn"
+ korusi.mandarin_language: "Gànshān"
+ hill_nomlaki.mandarin_language: "Shèngshān"
+ river_nomlaki.mandarin_language: "Shénshuǐ"
+
+ ###Japanese
+ #chumash_province
+ pimuu_nga.japanese_language: "Shinsekai"
+ ineseno.japanese_language: "Nōsubei"
+ channel_islands.japanese_language: "Kusashima"
+ ventureno.japanese_language: "Kansōchi"
+ yaanga.japanese_language: "Gyokōmura"
+ payomkawichum.japanese_language: "Hariyama"
+ kukamonga.japanese_language: "Kansōtani"
+
+
+ #################
+ ### Provinces ###
+ #################
+
+ aacistak_province: "Yuǎndōng"
+
+
+ ## Native Locations
+
 ### Locations
 #############
 ramaytush: "Ramaytush"

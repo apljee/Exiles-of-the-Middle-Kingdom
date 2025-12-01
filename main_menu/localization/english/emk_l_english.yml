@@ -18,73 +18,23 @@ KYE: "Koyeti"
 KYE_ADJ: "Koyeti"
 WOW: "Wowol"
 WOW_ADJ: "Wowol"
+PYM: "Paleuyami"
+PYM_ADJ: "Paleuyami"
+TLU: "Tulumni"
+TLU_ADJ: "Tulumni"
 
 #################
 ### Dynasties ###
 #################
 
-zihao_dynasty: "Zihao"
+zihao_dynasty: "Lei"
 
 ##################
 ### Characters ###
 ##################
 
-name_lei: "Lei"
-name_zihao: "Zihao"
-
-#################
-### Locations ###
-#################
-
-### Mandarin // Chinese
-#aacistak_province
-awaswas.mandarin_language: "Yuǎndōng"
-chochenyo.mandarin_language: "Dōnglù"
-mutsun.mandarin_language: "Nángēn"
-tepotahal.mandarin_language: "Yùgǎng"
-#northern_yokut_province
-yashikumne.mandarin_language: "Huóshuǐzhèn"
-tawalimni.mandarin_language: "Gàndōng"
-chawchila.mandarin_language: "Xīshān"
-gashowu.mandarin_language: "Zhōngshān"
-noptinte.mandarin_language: "Nánhé"
-#southern_yokut_province
-tachi.mandarin_language: "Tiānchí"
-pitkachi.mandarin_language: "Qiángǔ"
-yawdanshi.mandarin_language: "Shānzhàng"
-koyeti.mandarin_language: "Nángǔ"
-hometwoli.mandarin_language: "Shāncūn"
-tulumni.mandarin_language: "Sēnglǚzhèn"
-#pomo_province
-mewuk.mandarin_language: "Zǐhàozhèn"
-onasatis.mandarin_language: "Dàsēnlín"
-kashaya.mandarin_language: "Hóngmù"
-kulanapan.mandarin_language: "Běilù"
-tlokyhan.mandarin_language: "Xīhé"
-ukomno_om.mandarin_language: "Liúshān"
-#nomlaki_province
-suisin.mandarin_language: "Tiānyuán"
-yo_loy.mandarin_language: "Gānhànxiàn"
-korusi.mandarin_language: "Gànshān"
-hill_nomlaki.mandarin_language: "Shèngshān"
-river_nomlaki.mandarin_language: "Shénshuǐ"
-
-###Japanese
-#chumash_province
-pimuu_nga.japanese_language: "Shinsekai"
-ineseno.japanese_language: "Nōsubei"
-channel_islands.japanese_language: "Kusashima"
-ventureno.japanese_language: "Kansōchi"
-yaanga.japanese_language: "Gyokōmura"
-payomkawichum.japanese_language: "Hariyama"
-kukamonga.japanese_language: "Kansōtani"
-
-
-#################
-### Provinces ###
-#################
-
-aacistak_province: "Yuǎndōng"
+name_lei: "Zihao"
+name_zihao: "Lei"
 
 ################
 ### Cultures ###
@@ -127,6 +77,12 @@ flavor_emk_8_tt: "Populations living in the Shinshoku district have grown disple
 flavor_emk_9_tt: "Populations living in the Sakai district have grown displeased."
 flavor_emk_10_tt: "Populations living in the Samurai district have grown displeased."
 
+ #################
+ ### Buildings ###
+ #################
+
+ emk_watchtower: "Watchtower"
+ emk_watchtower_desc: "The humble watchtower has, for centuries, served as a sturdy backbone for maintaining regional control. Those stationed are tasked with scouting their surroundings and reporting any regional threats."
 
  #################
 ### Modifiers ###
@@ -214,6 +170,23 @@ flavor_chi_startup.11.a: "We must press on, Fusang awaits!"
 flavor_chi_startup.12.title: "The Grand Voyage III"
 flavor_chi_startup.12.desc: "When the first mountains of the New Coast rose on the horizon, many among the fleet believed they were hallucinating. Their rations had been cut to a handful of grains per day, their ships leaked constantly, and morale had been reduced to quiet endurance. Yet the peaks did not fade. By midday, they could see forests blanketing the hills and mist drifting from inland valleys.\n\nLandfall came with a mixture of relief and trepidation. The coastline was wide and unclaimed, shaped by long beaches and deep coves. Lei Zihao selected a promising harbor where fresh water flowed directly into the sea. The men and women who stepped ashore did so shakily, as if testing whether the earth would truly stay firm beneath their feet.\n\nThe landing site was surveyed thoroughly; the soil was fertile and the climate temperate. Strange animals grazed along the hillsides. The expedition, though wounded, had reached a land that could sustain them. A ceremony was held to mark the founding of Yuǎndōng, the new settlement born not from conquest but from survival.\n\nAs the last ships were anchored, the reality sank in: Our homeland was gone over the horizon, perhaps forever. The fleet would never again sail home. Their destiny now lay entirely in this unfamiliar world."
 flavor_chi_startup.12.a: "For Yuǎndōng, the first settlement in Fusang!"
+flavor_chi_startup.13.title: "The Monsoon Divide"
+flavor_chi_startup.13.desc: "For weeks the fleet has relied on the steady rhythm of the Summer Monsoon, but the wind now falters as the ships pass beyond known routes. The clouds begin to layer strangely, forming unfamiliar ridges that the Captains cannot read. Before long, debate breaks out between the more cautious captains and those eager to push ahead before the calm becomes a trap. Supplies are stable - but not limitless. Every delay threatens future provisions. The moment has arrived for you to choose the guiding principle of the crossing: caution, or speed."
+flavor_chi_startup.13.a: "We must be cautious in these unfamiliar waters!"
+flavor_chi_startup.13.b: "We must leave these waters swiftly!"
+flavor_chi_startup.13.c: "Maintain our current pace. Our Jurchen Khans can reestablish authority!"
+flavor_chi_startup.14.title: "Cautious Navigation"
+flavor_chi_startup.14.desc: "The fleet adopts a careful pace as the stormfront shifts unpredictably. Sailors appreciate the reduced risk, yet the slower movement dulls morale. Supplies remain stable, but tension lingers among the officers who feel the expedition is losing valuable time. No major incidents occur, although the crew grows restless under the extended routine. Although safe, this compromise seems to satisfy no one fully. The fleet pushes onward while quietly hoping that clearer skies justify the decision. Your caution preserves the voyage, though the officers note that future disputes may require firmer guidance to prevent lingering uncertainty."
+flavor_chi_startup.14.a: "This uncertainty only grows as time passes..."
+flavor_chi_startup.15.title: "Forced Ahead"
+flavor_chi_startup.15.desc: "The fleet surges ahead, but the aggressive pace exposes its weaknesses. A smaller escort ship loses several crates of dried provisions during a rough maneuver, irritating its captain. Crew members complain of fatigue, and several minor injuries occur when the deck becomes slick with spray. None of the damage is crippling, but the mood darkens as officers argue over the wisdom of maintaining this speed. The dark clouds ahead eventually break, allowing the fleet to regain some stability. Still, the pressure leaves the crew wary of further risks, and the officers record the losses as a lesson in restraint."
+flavor_chi_startup.15.a: "We didn't need those supplies anyways!"
+flavor_chi_startup.16.title: "Jurchen Mediation"
+flavor_chi_startup.16.desc: "Inviting the Jurchens to reassert command proves unexpectedly effective. Their firm but measured instructions stabilize the fleet’s formation and calm the navigators. The storm eventually passes, sparing the ships from any losses. Sailors take pride in the smooth maneuvering, and several captains commend the Khans’ decisive leadership. The incident improves trust between factions without overshadowing the chain of command. The fleet emerges from the episode with strengthened morale and clearer expectations for cooperation. It becomes a reminder that shared authority can serve the expedition better than internal rivalry."
+flavor_chi_startup.16.a: "We are ever thankful for our Jurchen companions."
+flavor_chi_startup.17.title: "Calm Seas, Stormy Hearts"
+flavor_chi_startup.17.desc: "flavor_chi_startup.17.desc"
+flavor_chi_startup.17.a: "flavor_chi_startup.17.a"
 
 ###Colonization Events
 emk_c_events.1.title: "Dōnglù, the Eastern Road"

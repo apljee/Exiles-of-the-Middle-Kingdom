@@ -1,0 +1,30 @@
+emk_watchtower = { #Watchtower, reworked Provincial Garrison.
+                                         #Provides low source of proximity and a staggeringly low amount of manpower
+    is_foreign = no
+    max_levels = 1
+    pop_type = soldiers
+
+    employment_size = manpower_employment
+    category = military_category
+
+    rural_settlement = yes
+    town = yes
+    city = yes
+
+    build_time = soldier_building
+
+    country_potential = {
+        tag = EMK
+    }
+
+    location_potential = {
+    }
+
+    possible_production_methods = { early_soldier_building_maintenance }
+    construction_demand = soldier_building_construction
+
+    modifier = {
+        local_manpower = 0.001
+        local_proximity_source = 3
+    }
+}

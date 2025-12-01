@@ -80,6 +80,18 @@ flavor_chi_startup.2 = { #A Stormy Night in Quanzhou
             }
         }
         set_global_variable = emk_startup_shang
+        set_global_variable = {
+            name = emk_shang_inf
+            value = 5
+        }
+        set_global_variable = {
+            name = emk_senglu_inf
+            value = 1
+        }
+        set_global_variable = {
+            name = emk_shi_inf
+            value = 1
+        }
         ai_chance = {
             base = 25
         }
@@ -93,6 +105,18 @@ flavor_chi_startup.2 = { #A Stormy Night in Quanzhou
     option = { #The Sēnglǚ will lead us to Fusang!
         name = flavor_chi_startup.2.b
         set_global_variable = emk_startup_senglu
+        set_global_variable = {
+            name = emk_shang_inf
+            value = 1
+        }
+        set_global_variable = {
+            name = emk_senglu_inf
+            value = 5
+        }
+        set_global_variable = {
+            name = emk_shi_inf
+            value = 1
+        }
         c:CHI = {
             trigger_event_non_silently = {
                 id = flavor_chi_startup.5
@@ -112,6 +136,18 @@ flavor_chi_startup.2 = { #A Stormy Night in Quanzhou
     option = { #The Shì will lead us to Fusang!
         name = flavor_chi_startup.2.c
         set_global_variable = emk_startup_shi
+        set_global_variable = {
+            name = emk_shang_inf
+            value = 1
+        }
+        set_global_variable = {
+            name = emk_senglu_inf
+            value = 1
+        }
+        set_global_variable = {
+            name = emk_shi_inf
+            value = 5
+        }
         c:CHI = {
             trigger_event_non_silently = {
                 id = flavor_chi_startup.4
@@ -394,7 +430,7 @@ flavor_chi_startup.7 = { #The Grand Voyage I
             text = emk_startup_warning_10
         }
         trigger = {
-            has_global_variable = `emk_startup_senglu`
+            has_global_variable = emk_startup_senglu
         }
         c:CHI = {
             trigger_event_non_silently = {
@@ -437,7 +473,7 @@ flavor_chi_startup.8 = { #Sakai Guildsmen
         set_global_variable = emk_startup_jp_burghers
         c:CHI = {
             trigger_event_non_silently = {
-                id = flavor_chi_startup.11
+                id = flavor_chi_startup.13
                 days = { 30 60 }
             }
         }
@@ -457,7 +493,7 @@ flavor_chi_startup.8 = { #Sakai Guildsmen
         }
         c:CHI = {
             trigger_event_non_silently = {
-                id = flavor_chi_startup.11
+                id = flavor_chi_startup.13
                 days = { 30 60 }
             }
         }
@@ -494,7 +530,7 @@ flavor_chi_startup.9 = { #Samurai
         set_global_variable = emk_startup_jp_nobles
         c:CHI = {
             trigger_event_non_silently = {
-                id = flavor_chi_startup.11
+                id = flavor_chi_startup.13
                 days = { 30 60 }
             }
         }
@@ -514,7 +550,7 @@ flavor_chi_startup.9 = { #Samurai
         }
         c:CHI = {
             trigger_event_non_silently = {
-                id = flavor_chi_startup.11
+                id = flavor_chi_startup.13
                 days = { 30 60 }
             }
         }
@@ -551,7 +587,7 @@ flavor_chi_startup.10 = { # Shinshoku
         set_global_variable = emk_startup_jp_clergy
         c:CHI = {
             trigger_event_silently = {
-                id = flavor_chi_startup.11
+                id = flavor_chi_startup.13
                 days = { 60 60 }
             }
         }
@@ -571,7 +607,7 @@ flavor_chi_startup.10 = { # Shinshoku
         }
         c:CHI = {
             trigger_event_silently = {
-                id = flavor_chi_startup.11
+                id = flavor_chi_startup.13
                 days = { 60 120 }
             }
         }
@@ -697,5 +733,129 @@ flavor_chi_startup.12 = { # The Grand Voyage III
             base = 100
         }
         change_player = c:EMK
+    }
+}
+
+flavor_chi_startup.13 = {
+    type = country_event
+    title = flavor_chi_startup.13.title
+    desc = flavor_chi_startup.13.desc
+    fire_only_once = yes
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+    illustration_tags = {
+        10 = angry
+        10 = exterior
+    }
+    option = {
+        name = flavor_chi_startup.13.a
+        trigger_event_silently = {
+            id = flavor_chi_startup.14
+            days = { 7 7 }
+        }
+    }
+    option = {
+        name = flavor_chi_startup.13.b
+        trigger_event_silently = {
+            id = flavor_chi_startup.15
+            days = { 7 7 }
+        }
+    }
+    option = {
+        name = flavor_chi_startup.13.c
+        trigger = {
+            has_global_variable = emk_startup_jurchen
+        }
+        custom_tooltip = {
+            text = emk_jurchen_tt
+        }
+        trigger_event_silently = {
+            id = flavor_chi_startup.16
+            days = { 7 7 }
+        }
+    }
+}
+
+flavor_chi_startup.14 = {
+    type = country_event
+    title = flavor_chi_startup.14.title
+    desc = flavor_chi_startup.14.desc
+    fire_only_once = yes
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+    option = {
+        name = flavor_chi_startup.14.a
+        set_global_variable = emk_13_calm
+        trigger_event_silently = {
+            id = flavor_chi_startup.17
+            months = { 1 2 }
+        }
+    }
+}
+
+flavor_chi_startup.15 = {
+    type = country_event
+    title = flavor_chi_startup.15.title
+    desc = flavor_chi_startup.15.desc
+    fire_only_once = yes
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+    option = {
+        name = flavor_chi_startup.15.a
+        set_global_variable = emk_13_fast
+        trigger_event_silently = {
+            id = flavor_chi_startup.17
+            months = { 1 2 }
+        }
+    }
+}
+
+flavor_chi_startup.16 = {
+    type = country_event
+    title = flavor_chi_startup.16.title
+    desc = flavor_chi_startup.16.desc
+    fire_only_once = yes
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+
+    option = {
+        name = flavor_chi_startup.16.a
+        set_global_variable = emk_13_jurchen
+        trigger_event_silently = {
+            id = flavor_chi_startup.17
+            months = { 1 2 }
+        }
+    }
+}
+
+flavor_chi_startup.17 = {
+    type = country_event
+    title = flavor_chi_startup.17.title
+    desc = flavor_chi_startup.17.desc
+    fire_only_once = yes
+    trigger = {
+        owns = location:dadu
+        has_global_variable = emk_startup_active
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    option = {
+        name = flavor_chi_startup.17.a
+        trigger_event_silently = {
+            id = flavor_chi_startup.11
+            months = { 1 2 }
+        }
     }
 }
