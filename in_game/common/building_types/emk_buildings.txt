@@ -4,7 +4,7 @@ emk_watchtower = { #Watchtower, reworked Provincial Garrison.
     max_levels = 1
     pop_type = soldiers
 
-    employment_size = manpower_employment
+    employment_size = 0.100
     category = military_category
 
     rural_settlement = yes

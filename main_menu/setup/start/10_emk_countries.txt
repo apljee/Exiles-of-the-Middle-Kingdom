@@ -13,19 +13,39 @@ countries = {
                 prestige = 50
                 stability = 10
             }
+            is_historic = yes
 
             government = {
                 ruler = emk_lei_zihao
                 type = republic
                 heir_selection = oligarchic_elective
-
                 parliament = {
                     parliament_type = council
+                }
+                reforms = {
+                    three_departments_system
+                    merchant_republic
+                }
+                privilege = {
+                    #Nobles
+                    nobles_land_rights
+                    nobility_council
+                    #Clergy
+                    maintain_clerical_proceedings
+                    clergy_protected_faith
+                    clergy_land_rights
+                    #Burghers
+                    burghers_land_rights
+                    commercial_advisory_council
+                    urban_development_grants
+                    #Commoners
+                    peasants_autonomous_villages
+                    communal_lands
                 }
             }
 
         }
-        SHI = {
+        SEK = {
             capital = pimuu_nga
             country_rank = rank_county
             type = location
@@ -58,6 +78,8 @@ countries = {
             starting_technology_level = 0
             culture = south_valley_yokut_culture
             religion = pomo_shamanism
+            include = "expl_northwestern_america"
+            include = "amerindian_tribe_settled_northwestern"
             currency_data = {
                 gold = 60
                 prestige = 25
@@ -82,6 +104,8 @@ countries = {
             starting_technology_level = 0
             culture = south_valley_yokut_culture
             religion = pomo_shamanism
+            include = "expl_northwestern_america"
+            include = "amerindian_tribe_settled_northwestern"
             currency_data = {
                 gold = 30
                 prestige = 15
@@ -106,6 +130,8 @@ countries = {
             starting_technology_level = 0
             culture = south_valley_yokut_culture
             religion = pomo_shamanism
+            include = "expl_northwestern_america"
+            include = "amerindian_tribe_settled_northwestern"
             currency_data = {
                 gold = 30
                 prestige = 15
@@ -130,6 +156,8 @@ countries = {
             starting_technology_level = 0
             culture = south_valley_yokut_culture
             religion = pomo_shamanism
+            include = "expl_northwestern_america"
+            include = "amerindian_tribe_settled_northwestern"
             currency_data = {
                 gold = 30
                 prestige = 15
@@ -154,6 +182,8 @@ countries = {
             starting_technology_level = 0
             culture = south_valley_yokut_culture
             religion = pomo_shamanism
+            include = "expl_northwestern_america"
+            include = "amerindian_tribe_settled_northwestern"
             currency_data = {
                 gold = 30
                 prestige = 15
@@ -178,6 +208,8 @@ countries = {
             starting_technology_level = 0
             culture = south_valley_yokut_culture
             religion = pomo_shamanism
+            include = "expl_northwestern_america"
+            include = "amerindian_tribe_settled_northwestern"
             currency_data = {
                 gold = 30
                 prestige = 15
@@ -202,6 +234,8 @@ countries = {
             starting_technology_level = 0
             culture = tulumni_culture
             religion = pomo_shamanism
+            include = "expl_northwestern_america"
+            include = "amerindian_tribe_settled_northwestern"
             currency_data = {
                 gold = 30
                 prestige = 15

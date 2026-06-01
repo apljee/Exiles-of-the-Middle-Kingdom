@@ -8,7 +8,7 @@ EMK = { # Yuandong / Exiles of the Middle Kingdom main
 	description_category = administrative
 	difficulty = 3
 }
-SHI = { # Shinsekai / Japanese settlers
+SEK = { # Shinsekai / Japanese settlers
     color = rgb { 252 3 53 }
     color2 = rgb { 51 51 51 }
 

@@ -94,36 +94,101 @@ flavor_emk.1 = { #The Future of Yuandong
         add_country_modifier = {
             modifier = emk_initial_optimism
             years = 1
-        }
+        } # initial optimism 1yr modifier
         trigger_event_non_silently = {
             id = flavor_emk.2
             days = { 7 14 }
-        }
-        trigger_event_non_silently = {
-            id = emk_events.1
-            years = { 1 2 }
-        }
+        } # trigger next phase
         if = {
-            limit = { has_global_variable = emk_startup_korea }
-            trigger_event_non_silently = {
-                id = flavor_emk.3
-                days = { 14 28 }
+            limit = { global_var:emk_voyage_buffs <= 4 }
+            add_country_modifier = {
+                modifier = emk_landfall_good
+                years = 25
             }
-        }
+        } # voyage buff great if buffs 4+
         if = {
-            limit = { has_global_variable = emk_startup_jurchen }
-            trigger_event_non_silently = {
-                id = flavor_emk.4
-                days = { 14 28 }
+            limit = {
+                AND = {
+                    global_var:emk_voyage_buffs >= 3
+                    global_var:emk_voyage_buffs < 1
+                }
             }
-        }
+            add_country_modifier = {
+                modifier = emk_landfall_normal
+                years = 25
+            }
+        } # voyage buff normal if buffs 2-3
         if = {
-            limit = { has_global_variable = emk_startup_tibet }
-            trigger_event_non_silently = {
-                id = flavor_emk.5
-                days = { 14 28 }
+            limit = { global_var:emk_voyage_buffs >= 1 }
+            add_country_modifier = {
+                modifier = emk_landfall_bad
+                years = 25
             }
-        }
+        } # voyage buff bad if buffs less than or = 1
+        hidden_effect = {
+            if = {
+                limit = { has_global_variable = emk_startup_korea }
+                trigger_event_non_silently = {
+                    id = flavor_emk.3
+                    days = { 14 28 }
+                }
+            } # if korea
+            if = {
+                limit = { has_global_variable = emk_startup_jurchen }
+                trigger_event_non_silently = {
+                    id = flavor_emk.4
+                    days = { 14 28 }
+                }
+            } # if jurchen
+            if = {
+                limit = { has_global_variable = emk_startup_tibet }
+                trigger_event_non_silently = {
+                    id = flavor_emk.5
+                    days = { 14 28 }
+                }
+            } # if tibet
+            if = {
+                limit = {
+                    NOT = {
+                        AND = {
+                            has_global_variable = emk_startup_korea
+                            has_global_variable = emk_startup_jurchen
+                            has_global_variable = emk_startup_tibet
+                        }
+                    }
+                }
+                trigger_event_silently = {
+                    id = flavor_emk.11
+                    years = { 2 3 }
+                }
+            } # if no minorities, nancun later
+            if = {
+                limit = {
+                    OR = {
+                        has_global_variable = emk_startup_jp_clergy
+                        has_global_variable = emk_startup_jp_burghers
+                        has_global_variable = emk_startup_jp_nobles
+                    }
+                }
+                trigger_event_non_silently = {
+                    id = flavor_emk.6
+                    months = { 1 2 }
+                }
+            } # if jp present, flavor_emk.6 - Those We Lost in 1-2 mo
+        } #conditionals
+        hidden_effect = {
+            grant_estate_privilege = estate_privilege:nobles_land_rights
+            grant_estate_privilege = estate_privilege:nobility_council
+            grant_estate_privilege = estate_privilege:maintain_clerical_proceedings
+            grant_estate_privilege = estate_privilege:clergy_protected_faith
+            grant_estate_privilege = estate_privilege:clergy_land_rights
+            grant_estate_privilege = estate_privilege:burghers_land_rights
+            grant_estate_privilege = estate_privilege:commercial_advisory_council
+            grant_estate_privilege = estate_privilege:urban_development_grants
+            grant_estate_privilege = estate_privilege:peasants_autonomous_villages
+            grant_estate_privilege = estate_privilege:communal_lands
+            grant_estate_privilege = estate_privilege:peasants_allowed_weapons_privilege
+        } #setup emk gov
     }
     option = {
         name = flavor_emk.1.b
@@ -171,7 +236,7 @@ flavor_emk.1 = { #The Future of Yuandong
             location:san_francisco_bay = {
                 discover_location = c:EMK
             }
-        }
+        } #setup yuandong buildings
         location:awaswas = {
             change_location_rank = location_rank:town
             construct_building = {
@@ -187,36 +252,101 @@ flavor_emk.1 = { #The Future of Yuandong
         add_country_modifier = {
             modifier = emk_initial_optimism
             years = 1
-        }
+        } # initial optimism 1yr modifier
         trigger_event_non_silently = {
             id = flavor_emk.2
             days = { 7 14 }
-        }
+        } # trigger next phase
         if = {
-            limit = { has_global_variable = emk_startup_korea }
-            trigger_event_non_silently = {
-                id = flavor_emk.3
-                days = { 14 28 }
+            limit = { global_var:emk_voyage_buffs <= 4 }
+            add_country_modifier = {
+                modifier = emk_landfall_good
+                years = 25
             }
-        }
+        } # voyage buff great if buffs 4+
         if = {
-            limit = { has_global_variable = emk_startup_jurchen }
-            trigger_event_non_silently = {
-                id = flavor_emk.4
-                days = { 14 28 }
+            limit = {
+                AND = {
+                    global_var:emk_voyage_buffs >= 3
+                    global_var:emk_voyage_buffs < 1
+                }
             }
-        }
+            add_country_modifier = {
+                modifier = emk_landfall_normal
+                years = 25
+            }
+        } # voyage buff normal if buffs 2-3
         if = {
-            limit = { has_global_variable = emk_startup_tibet }
-            trigger_event_non_silently = {
-                id = flavor_emk.5
-                days = { 14 28 }
+            limit = { global_var:emk_voyage_buffs >= 1 }
+            add_country_modifier = {
+                modifier = emk_landfall_bad
+                years = 25
             }
-        }
-        trigger_event_non_silently = {
-            id = emk_events.1
-            years = { 1 2 }
-        }
+        } # voyage buff bad if buffs less than or = 1
+        hidden_effect = {
+            if = {
+                limit = { has_global_variable = emk_startup_korea }
+                trigger_event_non_silently = {
+                    id = flavor_emk.3
+                    days = { 14 28 }
+                }
+            } # if korea
+            if = {
+                limit = { has_global_variable = emk_startup_jurchen }
+                trigger_event_non_silently = {
+                    id = flavor_emk.4
+                    days = { 14 28 }
+                }
+            } # if jurchen
+            if = {
+                limit = { has_global_variable = emk_startup_tibet }
+                trigger_event_non_silently = {
+                    id = flavor_emk.5
+                    days = { 14 28 }
+                }
+            } # if tibet
+            if = {
+                limit = {
+                    NOT = {
+                        AND = {
+                            has_global_variable = emk_startup_korea
+                            has_global_variable = emk_startup_jurchen
+                            has_global_variable = emk_startup_tibet
+                        }
+                    }
+                }
+                trigger_event_silently = {
+                    id = flavor_emk.11
+                    years = { 2 3 }
+                }
+            } # if no minorities, nancun later
+            if = {
+                limit = {
+                    OR = {
+                        has_global_variable = emk_startup_jp_clergy
+                        has_global_variable = emk_startup_jp_burghers
+                        has_global_variable = emk_startup_jp_nobles
+                    }
+                }
+                trigger_event_non_silently = {
+                    id = flavor_emk.6
+                    months = { 1 2 }
+                }
+            } # if jp present, flavor_emk.6 - Those We Lost in 1-2 mo
+        } #conditionals
+        hidden_effect = {
+            grant_estate_privilege = estate_privilege:nobles_land_rights
+            grant_estate_privilege = estate_privilege:nobility_council
+            grant_estate_privilege = estate_privilege:maintain_clerical_proceedings
+            grant_estate_privilege = estate_privilege:clergy_protected_faith
+            grant_estate_privilege = estate_privilege:clergy_land_rights
+            grant_estate_privilege = estate_privilege:burghers_land_rights
+            grant_estate_privilege = estate_privilege:commercial_advisory_council
+            grant_estate_privilege = estate_privilege:urban_development_grants
+            grant_estate_privilege = estate_privilege:peasants_autonomous_villages
+            grant_estate_privilege = estate_privilege:communal_lands
+            grant_estate_privilege = estate_privilege:peasants_allowed_weapons_privilege
+        } #setup emk gov
     }
     option = {
         name = flavor_emk.1.c
@@ -264,7 +394,7 @@ flavor_emk.1 = { #The Future of Yuandong
             location:san_francisco_bay = {
                 discover_location = c:EMK
             }
-        }
+        } #setup yuandong buildings
         location:awaswas = {
             change_location_rank = location_rank:town
             construct_building = {
@@ -280,38 +410,103 @@ flavor_emk.1 = { #The Future of Yuandong
         add_country_modifier = {
             modifier = emk_initial_optimism
             years = 1
-        }
+        } # initial optimism 1yr modifier
         trigger_event_non_silently = {
             id = flavor_emk.2
             days = { 7 14 }
-        }
+        } # trigger next phase
         if = {
-            limit = { has_global_variable = emk_startup_korea }
-            trigger_event_non_silently = {
-                id = flavor_emk.3
-                days = { 14 28 }
+            limit = { global_var:emk_voyage_buffs <= 4 }
+            add_country_modifier = {
+                modifier = emk_landfall_good
+                years = 25
             }
-        }
+        } # voyage buff great if buffs 4+
         if = {
-            limit = { has_global_variable = emk_startup_jurchen }
-            trigger_event_non_silently = {
-                id = flavor_emk.4
-                days = { 14 28 }
+            limit = {
+                AND = {
+                    global_var:emk_voyage_buffs >= 3
+                    global_var:emk_voyage_buffs < 1
+                }
             }
-        }
+            add_country_modifier = {
+                modifier = emk_landfall_normal
+                years = 25
+            }
+        } # voyage buff normal if buffs 2-3
         if = {
-            limit = { has_global_variable = emk_startup_tibet }
-            trigger_event_non_silently = {
-                id = flavor_emk.5
-                days = { 14 28 }
+            limit = { global_var:emk_voyage_buffs >= 1 }
+            add_country_modifier = {
+                modifier = emk_landfall_bad
+                years = 25
             }
-        }
-        trigger_event_non_silently = {
-            id = emk_events.1
-            years = { 1 2 }
-        }
+        } # voyage buff bad if buffs less than or = 1
+        hidden_effect = {
+            if = {
+                limit = { has_global_variable = emk_startup_korea }
+                trigger_event_non_silently = {
+                    id = flavor_emk.3
+                    days = { 14 28 }
+                }
+            } # if korea
+            if = {
+                limit = { has_global_variable = emk_startup_jurchen }
+                trigger_event_non_silently = {
+                    id = flavor_emk.4
+                    days = { 14 28 }
+                }
+            } # if jurchen
+            if = {
+                limit = { has_global_variable = emk_startup_tibet }
+                trigger_event_non_silently = {
+                    id = flavor_emk.5
+                    days = { 14 28 }
+                }
+            } # if tibet
+            if = {
+                limit = {
+                    NOT = {
+                        AND = {
+                            has_global_variable = emk_startup_korea
+                            has_global_variable = emk_startup_jurchen
+                            has_global_variable = emk_startup_tibet
+                        }
+                    }
+                }
+                trigger_event_silently = {
+                    id = flavor_emk.11
+                    years = { 2 3 }
+                }
+            } # if no minorities, nancun later
+            if = {
+                limit = {
+                    OR = {
+                        has_global_variable = emk_startup_jp_clergy
+                        has_global_variable = emk_startup_jp_burghers
+                        has_global_variable = emk_startup_jp_nobles
+                    }
+                }
+                trigger_event_non_silently = {
+                    id = flavor_emk.6
+                    months = { 1 2 }
+                }
+            } # if jp present, flavor_emk.6 - Those We Lost in 1-2 mo
+        } #conditionals
+        hidden_effect = {
+            grant_estate_privilege = estate_privilege:nobles_land_rights
+            grant_estate_privilege = estate_privilege:nobility_council
+            grant_estate_privilege = estate_privilege:maintain_clerical_proceedings
+            grant_estate_privilege = estate_privilege:clergy_protected_faith
+            grant_estate_privilege = estate_privilege:clergy_land_rights
+            grant_estate_privilege = estate_privilege:burghers_land_rights
+            grant_estate_privilege = estate_privilege:commercial_advisory_council
+            grant_estate_privilege = estate_privilege:urban_development_grants
+            grant_estate_privilege = estate_privilege:peasants_autonomous_villages
+            grant_estate_privilege = estate_privilege:communal_lands
+            grant_estate_privilege = estate_privilege:peasants_allowed_weapons_privilege
+        } #setup emk gov
     }
-}
+} # init landfall
 
 flavor_emk.2 = {
     type = country_event
@@ -453,7 +648,7 @@ flavor_emk.2 = {
             value = -0.075
         }
     }
-} #need to do modifiers still
+} # landfall 2nd buildings
 
 flavor_emk.3 = {
     type = country_event
@@ -482,6 +677,16 @@ flavor_emk.3 = {
         ai_chance = {
             base = 100
         }
+        location:awaswas = {
+            add_location_modifier = {
+                modifier = emk_korea_district
+                years = -1
+            }
+        }
+        trigger_event_silently = {
+            id = emk_c_events.1
+            months = { 12 18 }
+        }
         hidden_effect = {
             location:popeloutchom = {
                 discover_location = c:EMK
@@ -492,8 +697,12 @@ flavor_emk.3 = {
             location:mewuk = {
                 discover_location = c:EMK
             }
+            location:elkhorn_bay = {
+                discover_location = c:EMK
+            }
             location:ramaytush = {
                 change_location_owner = c:EMK
+                add_core = c:EMK
                 change_max_raw_material_workers = 1
                 add_pop = {
                     type = pop_type:peasants
@@ -523,37 +732,15 @@ flavor_emk.3 = {
         custom_tooltip = {
             text = emk_colonization_buff
         }
-        if = {
-            limit = {
-                OR = {
-                    has_global_variable = emk_startup_jp_clergy
-                    has_global_variable = emk_startup_jp_burghers
-                    has_global_variable = emk_startup_jp_nobles
-                }
-            }
-            trigger_event_non_silently = {
-                id = flavor_emk.6
-                days = { 14 28 }
-            }
-        }
     }
     option = {
         name = flavor_emk.3.b
         custom_tooltip = {
             text = emk_colonization_expel
         }
-        if = {
-            limit = {
-                OR = {
-                    has_global_variable = emk_startup_jp_clergy
-                    has_global_variable = emk_startup_jp_burghers
-                    has_global_variable = emk_startup_jp_nobles
-                }
-            }
-            trigger_event_non_silently = {
-                id = flavor_emk.6
-                days = { 14 28 }
-            }
+        trigger_event_silently = {
+            id = emk_c_events.1
+            months = { 12 18 }
         }
     }
 } #need to finish options and modifiers
@@ -579,6 +766,12 @@ flavor_emk.4 = {
     }
     option = {
         name = flavor_emk.4.a
+        location:awaswas = {
+            add_location_modifier = {
+                modifier = emk_jurchen_district
+                years = -1
+            }
+        }
         hidden_effect = {
             location:popeloutchom = {
                 discover_location = c:EMK
@@ -589,9 +782,13 @@ flavor_emk.4 = {
             location:mewuk = {
                 discover_location = c:EMK
             }
+            location:elkhorn_bay = {
+                discover_location = c:EMK
+            }
             location:ramaytush = {
                 change_max_raw_material_workers = 1
                 change_location_owner = c:EMK
+                add_core = c:EMK
                 add_pop = {
                     type = pop_type:peasants
                     culture = culture:jurchen_culture
@@ -624,21 +821,12 @@ flavor_emk.4 = {
                 }
             }
         }
+        trigger_event_silently = {
+            id = emk_c_events.1
+            months = { 12 18 }
+        }
         custom_tooltip = {
             text = emk_colonization_buff
-        }
-        if = {
-            limit = {
-                OR = {
-                    has_global_variable = emk_startup_jp_clergy
-                    has_global_variable = emk_startup_jp_burghers
-                    has_global_variable = emk_startup_jp_nobles
-                }
-            }
-            trigger_event_non_silently = {
-                id = flavor_emk.6
-                days = { 14 28 }
-            }
         }
     }
     option = {
@@ -646,18 +834,9 @@ flavor_emk.4 = {
         custom_tooltip = {
             text = emk_colonization_expel
         }
-        if = {
-            limit = {
-                OR = {
-                    has_global_variable = emk_startup_jp_clergy
-                    has_global_variable = emk_startup_jp_burghers
-                    has_global_variable = emk_startup_jp_nobles
-                }
-            }
-            trigger_event_non_silently = {
-                id = flavor_emk.6
-                days = { 14 28 }
-            }
+        trigger_event_silently = {
+            id = emk_c_events.1
+            months = { 12 18 }
         }
     }
 } #need to finish options and modifiers
@@ -683,6 +862,12 @@ flavor_emk.5 = {
     }
     option = {
         name = flavor_emk.5.a
+        location:awaswas = {
+            add_location_modifier = {
+                modifier = emk_tibet_district
+                years = -1
+            }
+        }
         hidden_effect = {
             location:popeloutchom = {
                 discover_location = c:EMK
@@ -693,9 +878,13 @@ flavor_emk.5 = {
             location:mewuk = {
                 discover_location = c:EMK
             }
+            location:elkhorn_bay = {
+                discover_location = c:EMK
+            }
             location:ramaytush = {
                 change_max_raw_material_workers = 1
                 change_location_owner = c:EMK
+                add_core = c:EMK
                 add_pop = {
                     type = pop_type:peasants
                     culture = culture:utsang_culture
@@ -731,18 +920,9 @@ flavor_emk.5 = {
         custom_tooltip = {
             text = emk_colonization_buff
         }
-        if = {
-            limit = {
-                OR = {
-                    has_global_variable = emk_startup_jp_clergy
-                    has_global_variable = emk_startup_jp_burghers
-                    has_global_variable = emk_startup_jp_nobles
-                }
-            }
-            trigger_event_non_silently = {
-                id = flavor_emk.6
-                days = { 14 28 }
-            }
+        trigger_event_silently = {
+            id = emk_c_events.1
+            months = { 12 18 }
         }
     }
     option = {
@@ -750,18 +930,9 @@ flavor_emk.5 = {
         custom_tooltip = {
             text = emk_colonization_expel
         }
-        if = {
-            limit = {
-                OR = {
-                    has_global_variable = emk_startup_jp_clergy
-                    has_global_variable = emk_startup_jp_burghers
-                    has_global_variable = emk_startup_jp_nobles
-                }
-            }
-            trigger_event_non_silently = {
-                id = flavor_emk.6
-                days = { 14 28 }
-            }
+        trigger_event_silently = {
+            id = emk_c_events.1
+            months = { 12 18 }
         }
     }
 } #need to finish options and modifiers
@@ -776,6 +947,16 @@ flavor_emk.6 = {
         from = 1338.6.1
         to = 1339.1.1
         monthly_chance = 50
+    }
+    trigger = {
+        tag = EMK
+        NOT = {
+            AND = {
+                has_global_variable = emk_startup_jp_nobles
+                has_global_variable = emk_startup_jp_clergy
+                has_global_variable = emk_startup_jp_burghers
+            }
+        }
     }
     illustration_tags = {
         10 = exterior
@@ -795,7 +976,7 @@ flavor_emk.6 = {
         }
         hidden_effect = {
             location:pimuu_nga = {
-                change_location_owner = c:SHI
+                change_location_owner = c:SEK
                 add_pop = {
                     type = pop_type:peasants
                     culture = culture:saigoku_culture
@@ -834,7 +1015,11 @@ flavor_emk.6 = {
             }
         } #change location / add pops for island
         if = {
-            limit = { location:ramaytush = { is_owned_by_target_or_subject = { owner = c:EMK } } }
+            limit = {
+                location:ramaytush = {
+                    is_owned_or_owned_by_subjects_of = c:EMK
+                }
+            }
             location:ramaytush = {
                 add_pop = {
                     type = pop_type:peasants
@@ -844,7 +1029,18 @@ flavor_emk.6 = {
                     literacy = 20
                 }
             }
-        }
+            else = {
+                location:awaswas = {
+                    add_pop = {
+                        type = pop_type:peasants
+                        culture = culture:saigoku_culture
+                        religion = religion:shinto
+                        size = 0.600
+                        literacy = 20
+                    }
+                }
+            }
+        } #if we have korean/jurchen/tibetans, also populate ramaytush
         location:awaswas = {
             add_pop = {
                 type = pop_type:peasants
@@ -897,7 +1093,7 @@ flavor_emk.6 = {
             }
         }
     }
-}
+} # jp district
 
 flavor_emk.7 = {
     type = country_event
@@ -973,54 +1169,54 @@ flavor_emk.7 = {
         } #location discoveries - EMK
         hidden_effect = {
             location:santa_barbara_coast = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:monterey_coast = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:san_catalina_island = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:north_canal = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:south_canal = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:san_diego_bay = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:orange_cove = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:los_angeles_bay = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:ineseno = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:pimuu_nga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:channel_islands = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:ventureno = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:yaanga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:kukamonga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:payomkawichum = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:chumash_range = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
-        } #location discoveries - SHI
+        } #location discoveries - SEK
         hidden_effect = {
             remove_global_variable = emk_startup_jp_clergy
             remove_global_variable = emk_startup_jp_nobles
@@ -1091,65 +1287,65 @@ flavor_emk.7 = {
         } #location discoveries - EMK
         hidden_effect = {
             location:santa_barbara_coast = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:santa_cruz_cove = {
                 discover_location = c:EMK
             }
             location:monterey_coast = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:san_catalina_island = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:north_canal = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:south_canal = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:san_diego_bay = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:orange_cove = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:los_angeles_bay = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:ineseno = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:pimuu_nga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:channel_islands = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:ventureno = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:yaanga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:kukamonga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:payomkawichum = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:chumash_range = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
-        } #location discoveries - SHI
+        } #location discoveries - SEK
         hidden_effect = {
             remove_global_variable = emk_startup_jp_clergy
             remove_global_variable = emk_startup_jp_nobles
             remove_global_variable = emk_startup_jp_burghers
-            set_global_variable = emk_startup_jp_accepted
+            # set_global_variable = emk_startup_jp_accepted
         } #global variables
         c:EMK = {
-            create_union = c:SHI
+            create_union = c:SEK
         }
         custom_tooltip = {
             text = emk_jp_vassal_warning
@@ -1215,65 +1411,65 @@ flavor_emk.7 = {
         } #location discoveries - EMK
         hidden_effect = {
             location:santa_barbara_coast = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:santa_cruz_cove = {
                 discover_location = c:EMK
             }
             location:monterey_coast = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:san_catalina_island = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:north_canal = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:south_canal = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:san_diego_bay = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:orange_cove = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:los_angeles_bay = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:ineseno = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:pimuu_nga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:channel_islands = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:ventureno = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:yaanga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:kukamonga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:payomkawichum = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:chumash_range = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
-        } #location discoveries - SHI
+        } #location discoveries - SEK
         hidden_effect = {
             remove_global_variable = emk_startup_jp_clergy
             remove_global_variable = emk_startup_jp_nobles
             remove_global_variable = emk_startup_jp_burghers
-            set_global_variable = emk_startup_jp_accepted
+            # set_global_variable = emk_startup_jp_accepted
         } #global variables
         c:EMK = {
-            create_union = c:SHI
+            create_union = c:SEK
         }
         custom_tooltip = {
             text = emk_jp_vassal_warning
@@ -1339,68 +1535,68 @@ flavor_emk.7 = {
         } #location discoveries - EMK
         hidden_effect = {
             location:santa_barbara_coast = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:santa_cruz_cove = {
                 discover_location = c:EMK
             }
             location:monterey_coast = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:san_catalina_island = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:north_canal = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:south_canal = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:san_diego_bay = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:orange_cove = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:los_angeles_bay = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:ineseno = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:pimuu_nga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:channel_islands = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:ventureno = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:yaanga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:kukamonga = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:payomkawichum = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
             location:chumash_range = {
-                discover_location = c:SHI
+                discover_location = c:SEK
             }
-        } #location discoveries - SHI
+        } #location discoveries - SEK
         hidden_effect = {
             remove_global_variable = emk_startup_jp_clergy
             remove_global_variable = emk_startup_jp_nobles
             remove_global_variable = emk_startup_jp_burghers
-            set_global_variable = emk_startup_jp_accepted
+            # set_global_variable = emk_startup_jp_accepted
         } #global variables
         custom_tooltip = {
             text = emk_jp_vassal_warning
         }
     }
-}
+} # jp arrival
 
 flavor_emk.8 = {
     type = country_event
@@ -1419,7 +1615,7 @@ flavor_emk.8 = {
             has_location_modifier = emk_jp_clergy_district
         }
         tag = EMK
-        country_exists = c:SHI
+        country_exists = c:SEK
     }
     illustration_tags = {
         10 = interior
@@ -1458,7 +1654,7 @@ flavor_emk.8 = {
             }
         }
     }
-}
+} # jp clergy discontent
 
 flavor_emk.9 = {
     type = country_event
@@ -1477,7 +1673,7 @@ flavor_emk.9 = {
             has_location_modifier = emk_jp_burghers_district
         }
         tag = EMK
-        country_exists = c:SHI
+        country_exists = c:SEK
     }
     illustration_tags = {
         10 = interior
@@ -1516,7 +1712,7 @@ flavor_emk.9 = {
             }
         }
     }
-}
+} # jp burghers discontent
 
 flavor_emk.10 = {
     type = country_event
@@ -1535,7 +1731,7 @@ flavor_emk.10 = {
             has_location_modifier = emk_jp_nobles_district
         }
         tag = EMK
-        country_exists = c:SHI
+        country_exists = c:SEK
     }
     illustration_tags = {
         10 = interior
@@ -1573,5 +1769,259 @@ flavor_emk.10 = {
                 years = 3
             }
         }
+    }
+} # jp nobles discontent
+
+flavor_emk.11 = {
+    type = country_event
+    title = flavor_emk_11.title
+    desc = flavor_emk_11.desc
+    fire_only_once = yes
+    trigger = {
+        tag = EMK
+        owns = location:awaswas
+        NOT = {
+            owns = location:ramaytush
+        }
+    }
+    illustration_tags = {
+        10 = regular
+        10 = exterior
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+    }
+    option = {
+        name = flavor_emk_11.a
+        hidden_effect = {
+            location:popeloutchom = {
+                discover_location = c:EMK
+            }
+            location:suisin = {
+                discover_location = c:EMK
+            }
+            location:mewuk = {
+                discover_location = c:EMK
+            }
+            location:elkhorn_bay = {
+                discover_location = c:EMK
+            }
+            location:ramaytush = {
+                add_core = c:EMK
+                change_max_raw_material_workers = 1
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 2.112
+                    literacy = 12
+                }
+                add_pop = {
+                    type = pop_type:laborers
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 1.566
+                    literacy = 12
+                }
+            }
+        }
+        location:ramaytush = {
+            change_location_owner = c:EMK
+        }
+        trigger_event_silently = {
+            id = emk_c_events.1
+            months = { 12 18 }
+        }
+    }
+    option = {
+        name = flavor_emk_11.b
+        hidden_effect = {
+            location:popeloutchom = {
+                discover_location = c:EMK
+            }
+            location:suisin = {
+                discover_location = c:EMK
+            }
+            location:mewuk = {
+                discover_location = c:EMK
+            }
+            location:elkhorn_bay = {
+                discover_location = c:EMK
+            }
+            location:ramaytush = {
+                add_core = c:EMK
+                change_max_raw_material_workers = 1
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 2.112
+                    literacy = 12
+                }
+                add_pop = {
+                    type = pop_type:laborers
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 1.566
+                    literacy = 12
+                }
+            }
+        }
+        location:ramaytush = {
+            change_raw_material = goods:wild_game
+            change_location_owner = c:EMK
+        }
+        add_gold = -20
+        trigger_event_silently = {
+            id = emk_c_events.1
+            months = { 12 18 }
+        }
+    }
+} # init emk_c_events
+
+flavor_emk.12 = {
+    type = country_event
+    title = flavor_emk.12.title
+    desc = flavor_emk.12.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1339.1.1
+        to = 1345.1.1
+        monthly_chance = 10
+    }
+    trigger = {
+        owns = location:awaswas
+    }
+    illustration_tags = {
+        10 = exterior
+        10 = regular
+    }
+    option = {
+        name = flavor_emk.12.a
+        set_global_variable = emk_ohlone_hostile
+        trigger_event_non_silently = {
+            id = flavor_emk.13
+            months = { 1 3 }
+        }
+    }
+    option = {
+        name = flavor_emk.12.b
+        set_global_variable = emk_ohlone_friendly
+        trigger_event_non_silently = {
+            id = flavor_emk.11
+            months = { 1 3 }
+        }
+    }
+} # init first contact events, sets stage with native relations.
+
+flavor_emk.13 = {
+    type = country_event
+    title = flavor_emk.13.title
+    desc = flavor_emk.13.desc
+    fire_only_once = yes
+    trigger = {
+        tag = EMK
+        has_global_variable = emk_ohlone_hostile
+    }
+    illustration_tags = {
+        10 = exterior
+        10 = regular
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            background = pop_type:soldiers
+            foreground = pop_type:soldiers
+        }
+    }
+    option = {
+        name = flavor_emk.13.a
+        trigger_event_non_silently = {
+            id = flavor_emk.14
+            months = { 1 3 }
+        }
+    }
+}
+
+flavor_emk.14 = {
+    type = country_event
+    title = flavor_emk.14.title
+    desc = flavor_emk.14.desc
+    fire_only_once = yes
+    trigger = {
+        tag = EMK
+        has_global_variable = emk_ohlone_hostile
+    }
+    illustration_tags = {
+        10 = exterior
+        10 = regular
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            background = pop_type:soldiers
+            foreground = pop_type:soldiers
+        }
+    }
+    option = {
+        name = flavor_emk.14.a
+    }
+}
+
+flavor_emk.15 = {
+    type = country_event
+    title = flavor_emk.15.title
+    desc = flavor_emk.15.desc
+    fire_only_once = yes
+    trigger = {
+        tag = EMK
+        has_global_variable = emk_ohlone_friendly
+    }
+    illustration_tags = {
+        10 = exterior
+        10 = regular
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            background = pop_type:soldiers
+            foreground = pop_type:soldiers
+        }
+    }
+    option = {
+        name = flavor_emk.15.a
+        set_local_variable = emk_ganen
+    }
+}
+
+flavor_emk.16 = {
+    type = country_event
+    title = flavor_emk.16.title
+    desc = flavor_emk.16.desc
+    fire_only_once = yes
+    trigger = {
+        tag = EMK
+        has_global_variable = emk_ohlone_friendly
+        has_local_variable = emk_ganen
+    }
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1343.6.1
+        to = 1343.12.1
+        monthly_chance = 50
+    }
+    illustration_tags = {
+        10 = exterior
+        10 = regular
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            background = pop_type:soldiers
+            foreground = pop_type:soldiers
+        }
+    }
+    option = {
+        name = flavor_emk.16.a
     }
 }

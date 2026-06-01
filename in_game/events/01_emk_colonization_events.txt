@@ -1,14 +1,7 @@
 namespace = emk_c_events
 
-## Colonization Events
-# Placeholder implementation. Currently, this is the best idea I have for a barebones implementation, probably not the best way to do it though.
-# Ideally, pick a location that has adjacency to the player from a preconfigured list of locations and then fire [emk_events.2] targeting that location.
-# V0.1 System - copying the event with a (relatively) low monthly_chance and hoping that it can simulate the intended effect.
-# V0.2 System - linear events that guide the player's colonization efforts through a more story-based system. Less random, but offers less replayability.
-# Ideal system - A mix between the two with the aforementioned characteristics.
-
-# emk_event.1 is a semi-story event that informs the player that scripted colonization is beginning.
-# emk_event.2 is the template for all of the other scripted colonization events.
+# Colonization events follow a linear sequence. may be replaced with a different
+# system at a future point in time, but this works well enough for the time being
 
 emk_c_events.1 = {
     type = country_event
@@ -25,7 +18,7 @@ emk_c_events.1 = {
         owns = location:awaswas
         c:EMK = {
             NOT = {
-                owns = location:chochenyo
+                owns = location:tamien
             }
         }
     }
@@ -41,22 +34,22 @@ emk_c_events.1 = {
         ruler = { save_scope_as = target_character }
     }
     option = {
-        name = emk_c_events.a
-        location:chochenyo = {
+        name = emk_c_events.1.a
+        location:tamien = {
             change_location_owner = c:EMK
-            change_raw_material = goods:rice
+            add_core = c:EMK
         }
         hidden_effect = {
             location:yashikumne = {
                 discover_location = c:EMK
             }
-            location:suisin = {
-                discover_location = c:EMK
-            }
             location:noptinte = {
                 discover_location = c:EMK
             }
-            location:chochenyo = {
+            location:mutsun = {
+                discover_location = c:EMK
+            }
+            location:tamien = {
                 change_max_raw_material_workers = 1
                 add_pop = {
                     type = pop_type:nobles
@@ -76,7 +69,301 @@ emk_c_events.1 = {
                     }
                     split_pop = {
                         fraction = 0.90
-                        location = location:mutsun
+                        location = location:tachi
+                    }
+                }
+            }
+        }
+        location:awaswas = {
+            add_road_to = {
+                target = location:tamien
+                type = gravel_road
+            }
+        }
+    }
+    option = {
+        name = emk_c_events.1.b
+        add_gold = -25
+        location:tamien = {
+            change_location_owner = c:EMK
+            add_core = c:EMK
+            change_raw_material = goods:rice
+        }
+        hidden_effect = { # location discoveries
+            location:muwekma = {
+                discover_location = c:EMK
+            }
+            location:yashikumne = {
+                discover_location = c:EMK
+            }
+            location:popeloutchom = {
+                discover_location = c:EMK
+            }
+            location:mutsun = {
+                discover_location = c:EMK
+            }
+            location:noptinte = {
+                discover_location = c:EMK
+            }
+            location:tamien = {
+                change_max_raw_material_workers = 1
+                add_pop = {
+                    type = pop_type:nobles
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 0.081
+                }
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 1.034
+                }
+                every_pop = {
+                    limit = {
+                        culture = culture:ohlone_culture
+                    }
+                    split_pop = {
+                        fraction = 0.90
+                        location = location:tachi
+                    }
+                }
+            }
+        }
+        location:awaswas = {
+            add_road_to = {
+                target = location:tamien
+                type = gravel_road
+            }
+        }
+    }
+    option = {
+        name = emk_c_events.1.c
+        add_gold = -25
+        location:tamien = {
+            change_location_owner = c:EMK
+            add_core = c:EMK
+            change_raw_material = goods:livestock
+        }
+        hidden_effect = {
+            location:yashikumne = {
+                discover_location = c:EMK
+            }
+            location:noptinte = {
+                discover_location = c:EMK
+            }
+            location:mutsun = {
+                discover_location = c:EMK
+            }
+            location:tamien = {
+                change_max_raw_material_workers = 1
+                add_pop = {
+                    type = pop_type:nobles
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 0.081
+                }
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 1.034
+                }
+                every_pop = {
+                    limit = {
+                        culture = culture:ohlone_culture
+                    }
+                    split_pop = {
+                        fraction = 0.90
+                        location = location:tachi
+                    }
+                }
+            }
+        }
+        location:awaswas = {
+            add_road_to = {
+                target = location:tamien
+                type = gravel_road
+            }
+        }
+    }
+}
+
+emk_c_events.2 = {
+    type = country_event
+    title = emk_c_events.2.title
+    desc = emk_c_events.2.desc
+    fire_only_once = yes
+    dynamic_historical_event = {
+        tag = EMK
+        from = 1340.11.1
+        to = 1350.11.1
+        monthly_chance =
+    }
+    trigger = {
+        owns = location:awaswas
+        owns = location:tamien
+        c:EMK = {
+            NOT = {
+                owns = location:muwekma
+            }
+            has_global_variable = emk_colonization_active
+        }
+    }
+    illustration_tags = {
+        10 = exterior
+        10 = regular
+    }
+    immediate = {
+        event_illustration_poptype_effect = {
+            foreground = pop_type:peasants
+            background = pop_type:peasants
+        }
+        ruler = { save_scope_as = target_character }
+    }
+    option = {
+        name = emk_c_events.2.a
+        location:muwekma = {
+            change_location_owner = c:EMK
+            add_core = c:EMK
+        }
+        hidden_effect = { # location discoveries
+            location:muwekma = {
+                discover_location = c:EMK
+            }
+            location:yashikumne = {
+                discover_location = c:EMK
+            }
+            location:popeloutchom = {
+                discover_location = c:EMK
+            }
+            location:mutsun = {
+                discover_location = c:EMK
+            }
+            location:noptinte = {
+                discover_location = c:EMK
+            }
+            location:tamien = {
+                change_max_raw_material_workers = 1
+                add_pop = {
+                    type = pop_type:nobles
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 0.081
+                }
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 1.034
+                }
+                every_pop = {
+                    limit = {
+                        culture = culture:ohlone_culture
+                    }
+                    split_pop = {
+                        fraction = 0.90
+                        location = location:tachi
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = emk_c_events.2.b
+        add_gold = -25
+        location:muwekma = {
+            change_location_owner = c:EMK
+            add_core = c:EMK
+            change_raw_material = goods:livestock
+        }
+        hidden_effect = { # location discoveries
+            location:muwekma = {
+                discover_location = c:EMK
+            }
+            location:yashikumne = {
+                discover_location = c:EMK
+            }
+            location:popeloutchom = {
+                discover_location = c:EMK
+            }
+            location:mutsun = {
+                discover_location = c:EMK
+            }
+            location:noptinte = {
+                discover_location = c:EMK
+            }
+            location:tamien = {
+                change_max_raw_material_workers = 1
+                add_pop = {
+                    type = pop_type:nobles
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 0.081
+                }
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 1.034
+                }
+                every_pop = {
+                    limit = {
+                        culture = culture:ohlone_culture
+                    }
+                    split_pop = {
+                        fraction = 0.90
+                        location = location:tachi
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = emk_c_events.2.c
+        add_gold = -25
+        location:muwekma = {
+            change_location_owner = c:EMK
+            add_core = c:EMK
+            change_raw_material = goods:cotton
+        }
+        hidden_effect = { # location discoveries
+            location:muwekma = {
+                discover_location = c:EMK
+            }
+            location:yashikumne = {
+                discover_location = c:EMK
+            }
+            location:popeloutchom = {
+                discover_location = c:EMK
+            }
+            location:mutsun = {
+                discover_location = c:EMK
+            }
+            location:noptinte = {
+                discover_location = c:EMK
+            }
+            location:tamien = {
+                change_max_raw_material_workers = 1
+                add_pop = {
+                    type = pop_type:nobles
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 0.081
+                }
+                add_pop = {
+                    type = pop_type:peasants
+                    culture = culture:jiaodong_culture
+                    religion = religion:sanjiao
+                    size = 1.034
+                }
+                every_pop = {
+                    limit = {
+                        culture = culture:ohlone_culture
+                    }
+                    split_pop = {
+                        fraction = 0.90
+                        location = location:tachi
                     }
                 }
             }

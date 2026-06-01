@@ -49,7 +49,7 @@ locations = {
 	}
 	koyeti = {
 		define_pop = {
-			culture = south_valley_yokut_cult..ure
+			culture = south_valley_yokut_culture
 			religion = pomo_shamanism
 			type = nobles
 			size = 0.015
@@ -323,7 +323,7 @@ locations = {
     }
     anamas = {
         define_pop = {
-            culture = micewal_culture
+            culture = north_valley_yokut_culture
             religion = pomo_shamanism
             type = tribesmen
             size = 0.890

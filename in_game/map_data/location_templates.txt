@@ -23266,7 +23266,7 @@ pitkachi = { topography = flatland vegetation = grasslands climate = cold_arid r
 koyeti = { topography = flatland vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = south_valley_yokut_culture raw_material = wild_game}
 yawdanshi = { topography = mountains vegetation = forest climate = mediterranean religion = pomo_shamanism culture = foothill_yokut_culture raw_material = wild_game}
 tulumni = { topography = flatland vegetation = grasslands climate = arid religion = pomo_shamanism culture = tulumni_culture raw_material = wild_game}
-hometwoli = { topography = flatland vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = tulumni_culture raw_material = iron}
+hometwoli = { topography = hills vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = tulumni_culture raw_material = iron}
 sierra_nevada_s = { topography = mountain_wasteland vegetation = forest climate = arctic}
 tulare_lake = { topography = lakes climate = arid}
 mewuk = { topography = hills vegetation = forest climate = oceanic religion = pomo_shamanism culture = miwok_culture raw_material = fish natural_harbor_suitability = 0.60}
@@ -28588,7 +28588,7 @@ obispeno = { topography = hills vegetation = grasslands climate = oceanic religi
 amuwu = { topography = hills vegetation = grasslands climate = oceanic religion = pomo_shamanism culture = chumash_culture raw_material = fish natural_harbor_suitability = 0.00}
 kuyam = { topography = hills vegetation = grasslands climate = oceanic religion = pomo_shamanism culture = chumash_culture raw_material = fiber_crops }
 barbareno = { topography = hills vegetation = grasslands climate = oceanic religion = pomo_shamanism culture = chumash_culture raw_material = fish natural_harbor_suitability = 0.00}
-tataviam = { topography = hills vegetation = sparse climate = mediterranean religion = pomo_shamanism culture = chumash_culture raw_material = salt }
+tataviam = { topography = hills vegetation = sparse climate = mediterranean religion = pomo_shamanism culture = chumash_culture raw_material = tin }
 pimu  = { topography = hills vegetation = woods climate = oceanic religion = pomo_shamanism culture = chumash_culture raw_material = fish natural_harbor_suitability = 0.00 }
 wegitiu = { topography = flatland vegetation = grasslands climate = arid religion = pomo_shamanism culture = tulumni_culture raw_material = wild_game }
 tuhohi = { topography = flatland vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = south_valley_yokut_culture raw_material = legumes }
@@ -28597,11 +28597,11 @@ wowol = { topography = flatland vegetation = grasslands climate = arid religion 
 chunut = { topography = hills vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = south_valley_yokut_culture raw_material = clay }
 choinimni = { topography = mountains vegetation = forest climate = mediterranean religion = pomo_shamanism culture = foothill_yokut_culture raw_material = stone }
 north_yawdanshi = { topography = mountains vegetation = forest climate = mediterranean religion = pomo_shamanism culture = foothill_yokut_culture raw_material = lumber}
-nutunutu = { topography = flatland vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = south_valley_yokut_culture raw_material = legumes }
+nutunutu = { topography = hills vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = south_valley_yokut_culture raw_material = legumes }
 wechihit = { topography = flatland vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = south_valley_yokut_culture raw_material = wild_game }
 choynok = { topography = flatland vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = south_valley_yokut_culture raw_material = fiber_crops }
 graton = { topography = hills vegetation = forest climate = oceanic religion = pomo_shamanism culture = miwok_culture raw_material = lumber natural_harbor_suitability = 0.60}
-ahwahnee = { topography = flatland vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = north_valley_yokut_culture raw_material = legumes }
+ahwahnee = { topography = hills vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = north_valley_yokut_culture raw_material = legumes }
 lisjan = { topography = flatland vegetation = grasslands climate = oceanic religion = pomo_shamanism culture = patwin_culture raw_material = fiber_crops }
 anamas = { topography = hills vegetation = forest climate = oceanic religion = pomo_shamanism culture = wappo_culture raw_material = lumber }
 orestima = { topography = flatland vegetation = grasslands climate = cold_arid religion = pomo_shamanism culture = north_valley_yokut_culture raw_material = maize}

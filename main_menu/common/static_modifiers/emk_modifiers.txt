@@ -102,3 +102,62 @@ emk_jp_nobles_mad_1b = {
     tax_income_efficiency = -0.05
     monthly_inflation = 0.0001
 }
+
+emk_korea_district = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.025
+    tax_income_efficiency = 0.05
+    local_monthly_development = 0.004
+}
+
+emk_tibet_district = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.025
+    local_unrest = -0.15
+    local_pop_food_consumption = -0.15
+}
+
+emk_jurchen_district = {
+    game_data = {
+        category = location
+    }
+    local_max_control = -0.025
+    local_production_efficiency = 0.05
+    local_levy_size_modifier = 0.075
+}
+
+emk_landfall_good = {
+    game_data = {
+        category = country
+    }
+    monthly_gold_income = 10
+    global_monthly_control = 0.01
+    global_production_efficiency = 0.05
+    global_pop_food_consumption = -0.20
+    global_population_growth = 0.05
+}
+
+emk_landfall_normal = {
+    game_data = {
+        category = country
+    }
+    monthly_gold_income = 5
+    global_monthly_control = 0.005
+    global_production_efficiency = 0.025
+    global_pop_food_consumption = -0.10
+    global_population_growth = 0.025
+}
+
+emk_landfall_bad = {
+    game_data = {
+        category = country
+    }
+    monthly_gold_income = 2.50
+    global_monthly_control = 0.005
+    global_pop_food_consumption = -0.05
+    global_population_growth = 0.01
+}

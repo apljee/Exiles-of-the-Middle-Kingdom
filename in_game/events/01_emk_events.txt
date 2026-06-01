@@ -50,14 +50,17 @@ emk_events.1 = {
         custom_tooltip = {
             text = emk_colonization_warning
         }
-        hidden_effect = {
+        hidden_effect = { #discover locations
+            location:orestima = {
+                discover_location = c:EMK
+            }
             location:kashaya = {
                 discover_location = c:EMK
             }
-            location:onasatis = {
+            location:suisin = {
                 discover_location = c:EMK
             }
-            location:suisin = {
+            location:chochenyo = {
                 discover_location = c:EMK
             }
             location:elkhorn_bay = {
